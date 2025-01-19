@@ -1,0 +1,18 @@
+{   "servers": [
+        { "name": "Rome", "position": "96,703", "color": "#0000FF" },
+        { "name": "Paris","position": "221,128","color": "#FF0000" },
+        { "name": "London", "position": "398,569", "color": "#FFC0CB"},
+        { "name": "Berlin", "position": "863,382", "color": "#FFFF00"},
+        { "name": "San Francisco", "position": "690,210", "color": "#00FFFF"},
+        { "name": "Beijing", "position": "801,722", "color": "#00FF00"}
+    ],
+    "drones": [
+        { "name": "Paul","position": "150,620", "server":"San Francisco"},
+        { "name": "Pierre","position": "1000,700", "server":"Paris" },
+        { "name": "Jules","position": "600,80", "server":"Rome" },
+        { "name": "Steve","position": "40,150", "server":"London" },
+        { "name": "Albert","position": "400,500", "server":"Berlin" },
+        { "name": "Ugo","position": "200,50", "server":"Beijing" }
+    ]
+}
+		
