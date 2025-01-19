@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->canvas->loadMesh("../../models/mesh2.json");
 
     // Load a default configuration file for drones and servers when the window is created.
-    QString configFile = "C:/Users/thoma/Downloads/config2.json";
+    QString configFile = "path/to/your/configFile/config2.json";
     ui->canvas->loadServers(configFile);
     ui->canvas->loadDrones(configFile);
 
