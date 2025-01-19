@@ -1,0 +1,643 @@
+\doxysection{Canvas Class Reference}
+\hypertarget{class_canvas}{}\label{class_canvas}\index{Canvas@{Canvas}}
+
+
+The \doxylink{class_canvas}{Canvas} class allows to draw the graphical interface canvas content.  
+
+
+
+
+{\ttfamily \#include $<$canvas.\+h$>$}
+
+Inheritance diagram for Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canvas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_canvas_af64171658065e802d3a2451bd03a965d}{update\+SB}} (QString s)
+\begin{DoxyCompactList}\small\item\em Emits an update message to update the status bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_canvas_aeea65f2bfc2be61bdbcaaa3a67c33185}{Canvas}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_canvas}{Canvas} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9}\label{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Canvas} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_canvas}{Canvas} object and cleans up any resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a02da07de074f8a6a92b346fd521ba018}{load\+Mesh}} (const QString \&title)
+\begin{DoxyCompactList}\small\item\em Loads a new mesh from the specified title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a5be8344709377e2d378b087b24363ccd}{load\+Servers}} (const QString \&title)
+\begin{DoxyCompactList}\small\item\em Loads the server list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a4c4bb8bd5bbe5166010734dfd7958583}{load\+Drones}} (const QString \&title)
+\begin{DoxyCompactList}\small\item\em Loads the drone list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a743fefef4af18260e8d56d95f92618aa}{paint\+Event}} (QPaint\+Event \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Handles the paint events to redraw the widget when necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_af6760030ef7aaf5cf73e89fbb55bee26}{resize\+Event}} (QResize\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em Handles the resize events to adjust the widget size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_aa577b5ad3f5c1b8f211fbaf66e56ad9f}{mouse\+Press\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Handles mouse press events triggered by mouse clicks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a2f2bb37513c12c40f80ce6ba1ebfc3eb}{mouse\+Move\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Handles mouse move events when the mouse is moved over the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_ab2eac6e655c2f2c8993bcea546e45d45}{add\+Points}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&tab)
+\begin{DoxyCompactList}\small\item\em Adds points (vertices) to the graphical interface, used in loading a mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a9be51dab63db480d6c237d45cc4a178a}{add\+Triangle}} (int id0, int id1, int id2)
+\begin{DoxyCompactList}\small\item\em Creates a triangle using the previously added points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_af2cb96ecee7fad0337ddc3e373027769}{add\+Triangle}} (int id0, int id1, int id2, const QColor \&color)
+\begin{DoxyCompactList}\small\item\em Creates a colored triangle using the previously added points. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_ac4559a6535f497f17415032632aa9f6a}\label{class_canvas_ac4559a6535f497f17415032632aa9f6a} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the canvas, removing all content. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a7c6aa7f3b2af6d97f2f9358d3e66951d}\label{class_canvas_a7c6aa7f3b2af6d97f2f9358d3e66951d} 
+void {\bfseries re\+Scale} ()
+\begin{DoxyCompactList}\small\item\em Rescales the content on the canvas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canvas_a99f4cab25a899653f9337ad36e4a3177}{get\+SizeofV}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of vertices in the canvas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canvas_a5233eb6cb36a66bde65b0e4abf01e617}{get\+SizeofT}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of triangles in the canvas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_canvas_a875b0b334afc2eb857604adddc118671}{check\+Delaunay}} ()
+\begin{DoxyCompactList}\small\item\em Checks if all triangles in the canvas satisfy the Delaunay condition. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a1f4f7e4221b1e378d99e498b0e9f3b89}\label{class_canvas_a1f4f7e4221b1e378d99e498b0e9f3b89} 
+void {\bfseries flipp\+All} ()
+\begin{DoxyCompactList}\small\item\em Flips non-\/\+Delaunay triangles to satisfy the Delaunay condition. \end{DoxyCompactList}\item 
+QVector$<$ const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_canvas_a4be165c96a43cc3c780e211f5e7cc6c8}{find\+Opposite\+Point\+Of\+Triangles\+With\+Edge\+Common}} (const \mbox{\hyperlink{class_triangle}{Triangle}} \&tri)
+\begin{DoxyCompactList}\small\item\em Finds the opposite points of triangles that share a common edge with the given triangle. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_canvas_a89da46d4aa8b0bb4d861ddbd9bd56ee2}{find\+Triangles\+Containing\+Point}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&M)
+\begin{DoxyCompactList}\small\item\em Finds all triangles that contain the specified point. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_canvas_af2416d857ebbf3aca6416f70976ba519}{sort\+Triangles\+By\+Left}} (const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_canvas_aa3de99c5a524030b65b136f565879abd}{triangles}}, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&reference\+Point)
+\begin{DoxyCompactList}\small\item\em Sorts a list of triangles based on their position relative to the given reference point (left to right). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a782a2832d4457c3d7ad9319752008e16}{create\+Polygon\+From\+Triangles}} (const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_canvas_aa3de99c5a524030b65b136f565879abd}{triangles}}, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&reference\+Point)
+\begin{DoxyCompactList}\small\item\em Creates a polygon from a collection of triangles based on their relative positions to a reference point. \end{DoxyCompactList}\item 
+QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \mbox{\hyperlink{class_canvas_a36400779155b40787ab5f192d1168c54}{get\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns the bounding box of the vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_aac0f7138e4cfb3e6b62ad821c2aa5255}{create\+Polygon\+From\+Triangles}} (const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&sorted\+Triangles)
+\begin{DoxyCompactList}\small\item\em Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) based on a list of sorted triangles. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \mbox{\hyperlink{class_canvas_a23e44b36949b25d99441242263e8db94}{get\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_ad17484a0449a61841e82a382000b39f9}{create\+Polygon}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ point\+List)
+\begin{DoxyCompactList}\small\item\em Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) based on a list of sorted triangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a8e31ca32966d8bb56b9cf542e211f72f}{create\+Polygon}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ point\+List, QColor color)
+\begin{DoxyCompactList}\small\item\em Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) with a specified color based on a list of sorted triangles. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \mbox{\hyperlink{class_canvas_ab3b332c167191ff90d5b60c6ee02d9f8}{sort\+Points\+By\+Angle}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&points, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&reference\+Point)
+\begin{DoxyCompactList}\small\item\em Sorts points by angle relative to a reference point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_canvas_a57b91b4ce3fcaae4f1418c1a493258c1}{get\+Server}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classserver}{server}})
+\begin{DoxyCompactList}\small\item\em Finds a server by its position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_canvas_a690c609efed633c526ff0da3f1d2e492}\label{class_canvas_a690c609efed633c526ff0da3f1d2e492} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries inf\+Left}
+\item 
+\Hypertarget{class_canvas_a3ddb17dde6267b688d1be98947e6fd30}\label{class_canvas_a3ddb17dde6267b688d1be98947e6fd30} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries inf\+Right}
+\item 
+\Hypertarget{class_canvas_aec288d465572793cd5f930890490a012}\label{class_canvas_aec288d465572793cd5f930890490a012} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries top\+Left}
+\item 
+\Hypertarget{class_canvas_ac9fefd073a6a4220ee61097e11444eed}\label{class_canvas_ac9fefd073a6a4220ee61097e11444eed} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries top\+Right}
+\item 
+\Hypertarget{class_canvas_a0ed3404d54fd67e188c9a35c6c0a0c2c}\label{class_canvas_a0ed3404d54fd67e188c9a35c6c0a0c2c} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ {\bfseries vertices}
+\begin{DoxyCompactList}\small\item\em List of vertices in the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_aeced5769ef6b9eb273fc496ee5c92a25}\label{class_canvas_aeced5769ef6b9eb273fc496ee5c92a25} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ {\bfseries servers}
+\begin{DoxyCompactList}\small\item\em List of points representing servers in the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_ad5af720ff6304250c55815ee18aff70d}\label{class_canvas_ad5af720ff6304250c55815ee18aff70d} 
+QVector$<$ \mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries servers\+Obj}
+\begin{DoxyCompactList}\small\item\em List of servers in the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a1313aae26271da4a783b0c6f6442750b}\label{class_canvas_a1313aae26271da4a783b0c6f6442750b} 
+QVector$<$ \mbox{\hyperlink{classmy_drone}{my\+Drone}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries drones}
+\begin{DoxyCompactList}\small\item\em List of points representing servers in the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a0f17d8b8a2c21433b47f011a47044d6d}\label{class_canvas_a0f17d8b8a2c21433b47f011a47044d6d} 
+QVector$<$ \mbox{\hyperlink{class_my_polygon}{My\+Polygon}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries polygons}
+\begin{DoxyCompactList}\small\item\em List of polygons created from the triangles. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_aa3de99c5a524030b65b136f565879abd}\label{class_canvas_aa3de99c5a524030b65b136f565879abd} 
+QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries triangles}
+\begin{DoxyCompactList}\small\item\em List of triangles in the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_ada604952b9da6549277c8b5e1724004d}\label{class_canvas_ada604952b9da6549277c8b5e1724004d} 
+\mbox{\hyperlink{class_graph}{Graph}} {\bfseries graph}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_graph}{Graph} for drone routes. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a3587255f87a2955040543ae86dc87838}\label{class_canvas_a3587255f87a2955040543ae86dc87838} 
+\mbox{\hyperlink{class_graph}{Graph}} {\bfseries network\+Graph}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_graph}{Graph} for server routes. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_adec15319e8610b6a4a016f70970ee82f}\label{class_canvas_adec15319e8610b6a4a016f70970ee82f} 
+bool {\bfseries show\+Triangles} = true
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of triangles in the data visualization. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_ac1a1b0d3b6fa9d3c4aa30c014e15051c}\label{class_canvas_ac1a1b0d3b6fa9d3c4aa30c014e15051c} 
+bool {\bfseries show\+Centers} = false
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of center points in the data visualization. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_abb70425f30be2b4b97e56bb56486a525}\label{class_canvas_abb70425f30be2b4b97e56bb56486a525} 
+bool {\bfseries show\+Circles} = false
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of circles in the data visualization. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a4f41d171d73a82b5b376905d087f4b3a}\label{class_canvas_a4f41d171d73a82b5b376905d087f4b3a} 
+bool {\bfseries show\+Servers} = true
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of servers in the visualization. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a7746f2e7538f5086be92b2a0b5393268}\label{class_canvas_a7746f2e7538f5086be92b2a0b5393268} 
+bool {\bfseries show\+Routes} = true
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of routes between servers and drones. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a2a72f9c87ccdc95493b927d4a7eb6e42}\label{class_canvas_a2a72f9c87ccdc95493b927d4a7eb6e42} 
+bool {\bfseries show\+Shared\+Sides} = false
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of shared sides in the \doxylink{class_voronoi}{Voronoi} diagram. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_ad704ed3392a81fde333e3c0ce5390d70}\label{class_canvas_ad704ed3392a81fde333e3c0ce5390d70} 
+bool {\bfseries voronoi\+Done} = false
+\begin{DoxyCompactList}\small\item\em Flag to check if the \doxylink{class_voronoi}{Voronoi} diagram has been generated. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_aac261a9654bb54a088738df053cdc6f5}\label{class_canvas_aac261a9654bb54a088738df053cdc6f5} 
+bool {\bfseries show\+Server\+Routes} = false
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of the server routes. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a74b54cb48f1497f196baecb7a26f87c7}\label{class_canvas_a74b54cb48f1497f196baecb7a26f87c7} 
+bool {\bfseries next\+Steps} = false
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the next steps (e.\+g., drone movement) should be displayed. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a47a0a36f99535fe7bee50862770e87cf}\label{class_canvas_a47a0a36f99535fe7bee50862770e87cf} 
+bool {\bfseries drone\+Movement} = false
+\begin{DoxyCompactList}\small\item\em Flag to control the visibility of drone movement in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_canvas_a5226f7b0b1190ff98adb88f2f79c9b5c}\label{class_canvas_a5226f7b0b1190ff98adb88f2f79c9b5c} 
+const double {\bfseries drone\+Collision\+Distance} =1.\+5
+\begin{DoxyCompactList}\small\item\em distance to detect collision with other drone \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a387509ed6ea92c766ec53cef653deab1}\label{class_canvas_a387509ed6ea92c766ec53cef653deab1} 
+float {\bfseries scale} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The scale factor applied to the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a1cfc6518e39c51d16ff4f8c9ddfed909}\label{class_canvas_a1cfc6518e39c51d16ff4f8c9ddfed909} 
+QPoint {\bfseries origin} = QPoint(10, 10)
+\begin{DoxyCompactList}\small\item\em The origin point of the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_canvas_a44d7f1a477fa5d0f28f622f8e23166ec}\label{class_canvas_a44d7f1a477fa5d0f28f622f8e23166ec} 
+QImage {\bfseries drone\+Img}
+\item 
+\Hypertarget{class_canvas_a4494677e39e636754f1afa9e1ae72ae6}\label{class_canvas_a4494677e39e636754f1afa9e1ae72ae6} 
+QImage {\bfseries drone\+Img\+Red}
+\item 
+\Hypertarget{class_canvas_a30155608cb89b4506ed60e63eae22e5b}\label{class_canvas_a30155608cb89b4506ed60e63eae22e5b} 
+QImage {\bfseries drone\+Img\+Blue}
+\item 
+\Hypertarget{class_canvas_a06252fffd9eb1f7052f2c43483b45c39}\label{class_canvas_a06252fffd9eb1f7052f2c43483b45c39} 
+QImage {\bfseries drone\+Img\+Yellow}
+\item 
+\Hypertarget{class_canvas_a6e02b14d4541a597223fe924b97ec49b}\label{class_canvas_a6e02b14d4541a597223fe924b97ec49b} 
+QImage {\bfseries drone\+Img\+Green}
+\item 
+\Hypertarget{class_canvas_a2e57eb19e5db0132f6503363c9f443a6}\label{class_canvas_a2e57eb19e5db0132f6503363c9f443a6} 
+QImage {\bfseries server\+Img}
+\begin{DoxyCompactList}\small\item\em Images for the graphical interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_canvas}{Canvas} class allows to draw the graphical interface canvas content. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]\doxylink{class_canvas}{Canvas} related methods \end{DoxyRefDesc}
+
+
+It stores\+:
+\begin{DoxyItemize}
+\item a list of triangles \+: QVector$<$\+Triangle\texorpdfstring{$\ast$}{*}$>$;
+\item a list of vertices \+: QVector$<$\+Vector2\+D$>$ vertices;
+\item a list of polygons \+: QVector$<$\+My\+Polygon\texorpdfstring{$\ast$}{*}$>$;
+\item the scale = 0.\+5 (float);
+\item the origin = QPoint(10, 10) (QPoint);
+\end{DoxyItemize}
+
+It is used by the \doxylink{class_main_window}{Main\+Window} class to create the data visualization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_canvas_aeea65f2bfc2be61bdbcaaa3a67c33185}\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{Canvas()}{Canvas()}}
+{\footnotesize\ttfamily \label{class_canvas_aeea65f2bfc2be61bdbcaaa3a67c33185} 
+Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \doxylink{class_canvas}{Canvas} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QWidget, default is nullptr.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]\doxylink{class_canvas}{Canvas} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_canvas_ab2eac6e655c2f2c8993bcea546e45d45}\index{Canvas@{Canvas}!addPoints@{addPoints}}
+\index{addPoints@{addPoints}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{addPoints()}{addPoints()}}
+{\footnotesize\ttfamily \label{class_canvas_ab2eac6e655c2f2c8993bcea546e45d45} 
+void Canvas\+::add\+Points (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{tab}{}\end{DoxyParamCaption})}
+
+
+
+Adds points (vertices) to the graphical interface, used in loading a mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & The list of points (vertices) to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a9be51dab63db480d6c237d45cc4a178a}\index{Canvas@{Canvas}!addTriangle@{addTriangle}}
+\index{addTriangle@{addTriangle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{addTriangle()}{addTriangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_canvas_a9be51dab63db480d6c237d45cc4a178a} 
+void Canvas\+::add\+Triangle (\begin{DoxyParamCaption}\item[{int}]{id0}{, }\item[{int}]{id1}{, }\item[{int}]{id2}{}\end{DoxyParamCaption})}
+
+
+
+Creates a triangle using the previously added points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id0} & The index of the first point. \\
+\hline
+{\em id1} & The index of the second point. \\
+\hline
+{\em id2} & The index of the third point. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_af2cb96ecee7fad0337ddc3e373027769}\index{Canvas@{Canvas}!addTriangle@{addTriangle}}
+\index{addTriangle@{addTriangle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{addTriangle()}{addTriangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_canvas_af2cb96ecee7fad0337ddc3e373027769} 
+void Canvas\+::add\+Triangle (\begin{DoxyParamCaption}\item[{int}]{id0}{, }\item[{int}]{id1}{, }\item[{int}]{id2}{, }\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Creates a colored triangle using the previously added points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id0} & The index of the first point. \\
+\hline
+{\em id1} & The index of the second point. \\
+\hline
+{\em id2} & The index of the third point. \\
+\hline
+{\em color} & The color to assign to the triangle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a875b0b334afc2eb857604adddc118671}\index{Canvas@{Canvas}!checkDelaunay@{checkDelaunay}}
+\index{checkDelaunay@{checkDelaunay}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{checkDelaunay()}{checkDelaunay()}}
+{\footnotesize\ttfamily \label{class_canvas_a875b0b334afc2eb857604adddc118671} 
+bool Canvas\+::check\+Delaunay (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if all triangles in the canvas satisfy the Delaunay condition. 
+
+\begin{DoxyReturn}{Returns}
+True if all triangles are Delaunay, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_ad17484a0449a61841e82a382000b39f9}\index{Canvas@{Canvas}!createPolygon@{createPolygon}}
+\index{createPolygon@{createPolygon}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{createPolygon()}{createPolygon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_canvas_ad17484a0449a61841e82a382000b39f9} 
+void Canvas\+::create\+Polygon (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$}]{point\+List}{}\end{DoxyParamCaption})}
+
+
+
+Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) based on a list of sorted triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorted\+Triangles} & A sorted list of triangles used to create the \doxylink{class_voronoi}{Voronoi} diagram. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a8e31ca32966d8bb56b9cf542e211f72f}\index{Canvas@{Canvas}!createPolygon@{createPolygon}}
+\index{createPolygon@{createPolygon}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{createPolygon()}{createPolygon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_canvas_a8e31ca32966d8bb56b9cf542e211f72f} 
+void Canvas\+::create\+Polygon (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$}]{point\+List}{, }\item[{QColor}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) with a specified color based on a list of sorted triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+List} & A sorted list of triangles used to create the \doxylink{class_voronoi}{Voronoi} diagram. \\
+\hline
+{\em color} & The color to fill the polygon. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_aac0f7138e4cfb3e6b62ad821c2aa5255}\index{Canvas@{Canvas}!createPolygonFromTriangles@{createPolygonFromTriangles}}
+\index{createPolygonFromTriangles@{createPolygonFromTriangles}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{createPolygonFromTriangles()}{createPolygonFromTriangles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_canvas_aac0f7138e4cfb3e6b62ad821c2aa5255} 
+void Canvas\+::create\+Polygon\+From\+Triangles (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&}]{sorted\+Triangles}{}\end{DoxyParamCaption})}
+
+
+
+Creates a polygon (\doxylink{class_voronoi}{Voronoi} diagram) based on a list of sorted triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorted\+Triangles} & A sorted list of triangles used to create the \doxylink{class_voronoi}{Voronoi} diagram. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a782a2832d4457c3d7ad9319752008e16}\index{Canvas@{Canvas}!createPolygonFromTriangles@{createPolygonFromTriangles}}
+\index{createPolygonFromTriangles@{createPolygonFromTriangles}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{createPolygonFromTriangles()}{createPolygonFromTriangles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_canvas_a782a2832d4457c3d7ad9319752008e16} 
+void Canvas\+::create\+Polygon\+From\+Triangles (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&}]{triangles}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{reference\+Point}{}\end{DoxyParamCaption})}
+
+
+
+Creates a polygon from a collection of triangles based on their relative positions to a reference point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & The list of triangles to create a polygon from. \\
+\hline
+{\em reference\+Point} & The reference point used to determine the order of the triangles. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a4be165c96a43cc3c780e211f5e7cc6c8}\index{Canvas@{Canvas}!findOppositePointOfTrianglesWithEdgeCommon@{findOppositePointOfTrianglesWithEdgeCommon}}
+\index{findOppositePointOfTrianglesWithEdgeCommon@{findOppositePointOfTrianglesWithEdgeCommon}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{findOppositePointOfTrianglesWithEdgeCommon()}{findOppositePointOfTrianglesWithEdgeCommon()}}
+{\footnotesize\ttfamily \label{class_canvas_a4be165c96a43cc3c780e211f5e7cc6c8} 
+QVector$<$ const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ Canvas\+::find\+Opposite\+Point\+Of\+Triangles\+With\+Edge\+Common (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_triangle}{Triangle}} \&}]{tri}{}\end{DoxyParamCaption})}
+
+
+
+Finds the opposite points of triangles that share a common edge with the given triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tri} & The triangle whose common-\/edge opposite points are being searched for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A QVector of pointers to \doxylink{class_vector2_d}{Vector2D} representing the opposite points. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a89da46d4aa8b0bb4d861ddbd9bd56ee2}\index{Canvas@{Canvas}!findTrianglesContainingPoint@{findTrianglesContainingPoint}}
+\index{findTrianglesContainingPoint@{findTrianglesContainingPoint}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{findTrianglesContainingPoint()}{findTrianglesContainingPoint()}}
+{\footnotesize\ttfamily \label{class_canvas_a89da46d4aa8b0bb4d861ddbd9bd56ee2} 
+QList$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ Canvas\+::find\+Triangles\+Containing\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{M}{}\end{DoxyParamCaption})}
+
+
+
+Finds all triangles that contain the specified point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & The point to search for inside the triangles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A QList of pointers to \doxylink{class_triangle}{Triangle} objects that contain the specified point. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a36400779155b40787ab5f192d1168c54}\index{Canvas@{Canvas}!getBox@{getBox}}
+\index{getBox@{getBox}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getBox()}{getBox()}}
+{\footnotesize\ttfamily \label{class_canvas_a36400779155b40787ab5f192d1168c54} 
+QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ Canvas\+::get\+Box (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates and returns the bounding box of the vertices. 
+
+\begin{DoxyReturn}{Returns}
+A QPair containing the bottom-\/left and top-\/right coordinates of the bounding box. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a57b91b4ce3fcaae4f1418c1a493258c1}\index{Canvas@{Canvas}!getServer@{getServer}}
+\index{getServer@{getServer}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getServer()}{getServer()}}
+{\footnotesize\ttfamily \label{class_canvas_a57b91b4ce3fcaae4f1418c1a493258c1} 
+\mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*} Canvas\+::get\+Server (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{server}{}\end{DoxyParamCaption})}
+
+
+
+Finds a server by its position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The position of the server to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the server if found, or nullptr if not. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a5233eb6cb36a66bde65b0e4abf01e617}\index{Canvas@{Canvas}!getSizeofT@{getSizeofT}}
+\index{getSizeofT@{getSizeofT}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getSizeofT()}{getSizeofT()}}
+{\footnotesize\ttfamily \label{class_canvas_a5233eb6cb36a66bde65b0e4abf01e617} 
+int Canvas\+::get\+SizeofT (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of triangles in the canvas. 
+
+\begin{DoxyReturn}{Returns}
+The number of triangles. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a99f4cab25a899653f9337ad36e4a3177}\index{Canvas@{Canvas}!getSizeofV@{getSizeofV}}
+\index{getSizeofV@{getSizeofV}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getSizeofV()}{getSizeofV()}}
+{\footnotesize\ttfamily \label{class_canvas_a99f4cab25a899653f9337ad36e4a3177} 
+int Canvas\+::get\+SizeofV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of vertices in the canvas. 
+
+\begin{DoxyReturn}{Returns}
+The number of vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a23e44b36949b25d99441242263e8db94}\index{Canvas@{Canvas}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily \label{class_canvas_a23e44b36949b25d99441242263e8db94} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ Canvas\+::get\+Vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of vertices. 
+
+\begin{DoxyReturn}{Returns}
+A QVector of \doxylink{class_vector2_d}{Vector2D} objects representing the vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_a4c4bb8bd5bbe5166010734dfd7958583}\index{Canvas@{Canvas}!loadDrones@{loadDrones}}
+\index{loadDrones@{loadDrones}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{loadDrones()}{loadDrones()}}
+{\footnotesize\ttfamily \label{class_canvas_a4c4bb8bd5bbe5166010734dfd7958583} 
+void Canvas\+::load\+Drones (\begin{DoxyParamCaption}\item[{const QString \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Loads the drone list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title or path to the drone file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a02da07de074f8a6a92b346fd521ba018}\index{Canvas@{Canvas}!loadMesh@{loadMesh}}
+\index{loadMesh@{loadMesh}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{loadMesh()}{loadMesh()}}
+{\footnotesize\ttfamily \label{class_canvas_a02da07de074f8a6a92b346fd521ba018} 
+void Canvas\+::load\+Mesh (\begin{DoxyParamCaption}\item[{const QString \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Loads a new mesh from the specified title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title or path to the mesh file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a5be8344709377e2d378b087b24363ccd}\index{Canvas@{Canvas}!loadServers@{loadServers}}
+\index{loadServers@{loadServers}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{loadServers()}{loadServers()}}
+{\footnotesize\ttfamily \label{class_canvas_a5be8344709377e2d378b087b24363ccd} 
+void Canvas\+::load\+Servers (\begin{DoxyParamCaption}\item[{const QString \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Loads the server list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title or path to the server file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a2f2bb37513c12c40f80ce6ba1ebfc3eb}\index{Canvas@{Canvas}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily \label{class_canvas_a2f2bb37513c12c40f80ce6ba1ebfc3eb} 
+void Canvas\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handles mouse move events when the mouse is moved over the widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The mouse event triggered when the mouse moves. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_aa577b5ad3f5c1b8f211fbaf66e56ad9f}\index{Canvas@{Canvas}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily \label{class_canvas_aa577b5ad3f5c1b8f211fbaf66e56ad9f} 
+void Canvas\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handles mouse press events triggered by mouse clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The mouse event triggered when a mouse button is pressed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_a743fefef4af18260e8d56d95f92618aa}\index{Canvas@{Canvas}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily \label{class_canvas_a743fefef4af18260e8d56d95f92618aa} 
+void Canvas\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handles the paint events to redraw the widget when necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The paint event that is triggered for repainting. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_af6760030ef7aaf5cf73e89fbb55bee26}\index{Canvas@{Canvas}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily \label{class_canvas_af6760030ef7aaf5cf73e89fbb55bee26} 
+void Canvas\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handles the resize events to adjust the widget size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The resize event triggered when the widget\textquotesingle{}s size changes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_canvas_ab3b332c167191ff90d5b60c6ee02d9f8}\index{Canvas@{Canvas}!sortPointsByAngle@{sortPointsByAngle}}
+\index{sortPointsByAngle@{sortPointsByAngle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{sortPointsByAngle()}{sortPointsByAngle()}}
+{\footnotesize\ttfamily \label{class_canvas_ab3b332c167191ff90d5b60c6ee02d9f8} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ Canvas\+::sort\+Points\+By\+Angle (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{points}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{reference\+Point}{}\end{DoxyParamCaption})}
+
+
+
+Sorts points by angle relative to a reference point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A list of points to sort. \\
+\hline
+{\em reference\+Point} & The reference point used to calculate the angle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A sorted list of points based on the angle from the reference point. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_af2416d857ebbf3aca6416f70976ba519}\index{Canvas@{Canvas}!sortTrianglesByLeft@{sortTrianglesByLeft}}
+\index{sortTrianglesByLeft@{sortTrianglesByLeft}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{sortTrianglesByLeft()}{sortTrianglesByLeft()}}
+{\footnotesize\ttfamily \label{class_canvas_af2416d857ebbf3aca6416f70976ba519} 
+QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ Canvas\+::sort\+Triangles\+By\+Left (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ \&}]{triangles}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{reference\+Point}{}\end{DoxyParamCaption})}
+
+
+
+Sorts a list of triangles based on their position relative to the given reference point (left to right). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & The list of triangles to be sorted. \\
+\hline
+{\em reference\+Point} & The reference point to sort the triangles by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A QVector of sorted triangles. 
+\end{DoxyReturn}
+\Hypertarget{class_canvas_af64171658065e802d3a2451bd03a965d}\index{Canvas@{Canvas}!updateSB@{updateSB}}
+\index{updateSB@{updateSB}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{updateSB}{updateSB}}
+{\footnotesize\ttfamily \label{class_canvas_af64171658065e802d3a2451bd03a965d} 
+void Canvas\+::update\+SB (\begin{DoxyParamCaption}\item[{QString}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emits an update message to update the status bar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The message to be displayed in the status bar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/canvas.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/canvas.\+cpp\end{DoxyCompactItemize}

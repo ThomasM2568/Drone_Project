@@ -1,0 +1,68 @@
+\doxysection{Matrix22 Class Reference}
+\hypertarget{class_matrix22}{}\label{class_matrix22}\index{Matrix22@{Matrix22}}
+
+
+The \doxylink{class_matrix22}{Matrix22} class allows to create a matrix of 2x2 size. It provides methods for matrix manipulation and determinant calculation.  
+
+
+
+
+{\ttfamily \#include $<$determinant.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matrix22_a847e41917439faa7d5707bbf1332b5a0}{get2x2\+From3x3}} (const \mbox{\hyperlink{class_matrix33}{Matrix33}} \&mat33, int shadow\+Lin, int shadow\+Col)
+\begin{DoxyCompactList}\small\item\em Extracts a 2x2 submatrix from a 3x3 matrix by removing a specified row and column. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix22_ad18ae363d30a93115d9ac2fb53e6e71a}{determinant}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the 2x2 matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix22_af43a553822d93f8d38fdf057603be0ae}\label{class_matrix22_af43a553822d93f8d38fdf057603be0ae} 
+float {\bfseries m} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of points representing the 2x2 matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_matrix22}{Matrix22} class allows to create a matrix of 2x2 size. It provides methods for matrix manipulation and determinant calculation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_matrix22_ad18ae363d30a93115d9ac2fb53e6e71a}\index{Matrix22@{Matrix22}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix22@{Matrix22}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily \label{class_matrix22_ad18ae363d30a93115d9ac2fb53e6e71a} 
+float Matrix22\+::determinant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the determinant of the 2x2 matrix. 
+
+\begin{DoxyReturn}{Returns}
+The determinant of the matrix. 
+\end{DoxyReturn}
+\Hypertarget{class_matrix22_a847e41917439faa7d5707bbf1332b5a0}\index{Matrix22@{Matrix22}!get2x2From3x3@{get2x2From3x3}}
+\index{get2x2From3x3@{get2x2From3x3}!Matrix22@{Matrix22}}
+\doxysubsubsection{\texorpdfstring{get2x2From3x3()}{get2x2From3x3()}}
+{\footnotesize\ttfamily \label{class_matrix22_a847e41917439faa7d5707bbf1332b5a0} 
+void Matrix22\+::get2x2\+From3x3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix33}{Matrix33}} \&}]{mat33}{, }\item[{int}]{shadow\+Lin}{, }\item[{int}]{shadow\+Col}{}\end{DoxyParamCaption})}
+
+
+
+Extracts a 2x2 submatrix from a 3x3 matrix by removing a specified row and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat33} & The 3x3 matrix from which to extract the submatrix. \\
+\hline
+{\em shadow\+Lin} & The row to exclude. \\
+\hline
+{\em shadow\+Col} & The column to exclude. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/determinant.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/determinant.\+cpp\end{DoxyCompactItemize}

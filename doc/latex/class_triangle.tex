@@ -1,0 +1,544 @@
+\doxysection{Triangle Class Reference}
+\hypertarget{class_triangle}{}\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+The \doxylink{class_triangle}{Triangle} class represents a triangle in a 2D plane defined by three vertices. It provides methods for geometric operations such as checking if a point is inside the triangle, computing the circumcircle, and checking the Delaunay property.  
+
+
+
+
+{\ttfamily \#include $<$triangle.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_a27ba65a1d5db4b36848e3d6899e7ed36}{Triangle}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr1, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr2, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr3)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_triangle}{Triangle} with the given vertices and a default color (yellow). \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_afe0606c35062aba9f04350d277aff18b}\label{class_triangle_afe0606c35062aba9f04350d277aff18b} 
+void {\bfseries update\+Name} ()
+\item 
+\mbox{\hyperlink{class_triangle_af5042c1a552178df98b2e2317a24e803}{Triangle}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr1, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr2, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}ptr3, const QColor \&p\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_triangle}{Triangle} with the given vertices and a specified color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a6350e7211a97e18880ab8f03a1798425}{is\+On\+The\+Left}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}P, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}P1, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}P2)
+\begin{DoxyCompactList}\small\item\em Checks if point P is to the left of the line formed by P1 and P2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a2c84480dd64dd9d9f78142cd0f4a311b}{is\+Inside}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Checks if the point (x, y) is inside the triangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_aad6de8913e4bb6e9f8d929ffbb07a289}{is\+Inside}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P)
+\begin{DoxyCompactList}\small\item\em Checks if the point P is inside the triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a2ee48003aaf0a326c3866c7e2d61a261}{draw}} (QPainter \&painter)
+\begin{DoxyCompactList}\small\item\em Draws the triangle using the provided QPainter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_afa7613cc5c6e20df91f408166bd1aa61}{draw\+Circle}} (QPainter \&painter)
+\begin{DoxyCompactList}\small\item\em Draws the circumcircle of the triangle using the provided QPainter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a9d9365aceb3f6e4f53867a0d37710cbb}{set\+Color}} (const QColor \&p\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Sets the color of the triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a1eaa6931e3451fb195f24a2c1da5f2fc}{set\+Highlighted}} (bool v)
+\begin{DoxyCompactList}\small\item\em Sets whether the triangle should be highlighted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a994f6a50a894f5a919ea4b5cda7c109f}{is\+Highlighted}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the triangle is highlighted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_afcaaedef11a6f06fb0eb778874f7a10b}{is\+Flippable}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the triangle can be flipped. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_triangle_a1fa027b0ad66f77a65763a485d99ebd7}{get\+Circle\+Center}} ()
+\begin{DoxyCompactList}\small\item\em Gets the center of the circumcircle of the triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a650fc423f2b682cc33b47c5313463406}{set\+Delaunay}} (bool v, bool f)
+\begin{DoxyCompactList}\small\item\em Sets whether the triangle is Delaunay-\/compliant and whether it is flippable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a27f92765672968ee36819c38c377139b}{set\+Opposite}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}o)
+\begin{DoxyCompactList}\small\item\em Sets the opposite point that makes this triangle flippable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}{get\+Opposite}} ()
+\begin{DoxyCompactList}\small\item\em Gets the opposite point that makes this triangle flippable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a6cd8236a25745922faf396bf4bbd6ded}{check\+Delaunay}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&tab\+Vertices)
+\begin{DoxyCompactList}\small\item\em Checks if the triangle satisfies the Delaunay condition by checking if the determinant of the matrix formed by the triangle\textquotesingle{}s vertices and a test point is non-\/positive for all points in tab\+Vertices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{get\+Vertex\+Ptr}} (int i) const
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the i-\/th vertex of the triangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a2ecf064f3402d0fe6ab5624fb0e6ccda}{has\+Edge}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} A, \mbox{\hyperlink{class_vector2_d}{Vector2D}} B) const
+\begin{DoxyCompactList}\small\item\em Checks if the triangle has the edge defined by points A and B. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_aba5922794392893f80af8de5b75e582b}{contains}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&M)
+\begin{DoxyCompactList}\small\item\em Checks if the point M is one of the triangle\textquotesingle{}s vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a4294661184d49e6bd3e29f023f2d58e1}{update\+Vertices}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}\+\_\+A, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}\+\_\+B, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}\+\_\+C)
+\begin{DoxyCompactList}\small\item\em Updates the vertices of the triangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_a9e8fb3bac838c95865165e61b14ee6bc}{circle\+Contains}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}M)
+\begin{DoxyCompactList}\small\item\em Checks if the point M is inside the circumcircle of the triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a8b8384238eeee2464c6952a7c534f60f}{flipp\+It}} (QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ triangles)
+\begin{DoxyCompactList}\small\item\em Attempts to flip the triangle with an adjacent triangle if possible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a35161ed8247d27691b99492961c16cb9}{check\+Is\+Open}} (QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$ triangles)
+\begin{DoxyCompactList}\small\item\em Checks if the triangle is open based on its shared edges with other triangles. \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a1f01be724b1edae39834371875891f5a}\label{class_triangle_a1f01be724b1edae39834371875891f5a} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries get\+Segment\+Midpoint} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} v1, \mbox{\hyperlink{class_vector2_d}{Vector2D}} v2) const
+\item 
+\Hypertarget{class_triangle_a8cb775c2fa61c93b40a31abce2066592}\label{class_triangle_a8cb775c2fa61c93b40a31abce2066592} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries get\+Orthogonal\+From\+Midpoint} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} v1, \mbox{\hyperlink{class_vector2_d}{Vector2D}} v2, \mbox{\hyperlink{class_vector2_d}{Vector2D}} midpoint) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_triangle_ab8d8df6dbbcd570c5e5b249fb06ee6f7}\label{class_triangle_ab8d8df6dbbcd570c5e5b249fb06ee6f7} 
+bool {\bfseries is\+Open} = false
+\item 
+\Hypertarget{class_triangle_ae22bbd13241b41f649f5f5a2de1dca0a}\label{class_triangle_ae22bbd13241b41f649f5f5a2de1dca0a} 
+QSet$<$ QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ $>$ {\bfseries open\+Sides}
+\item 
+\Hypertarget{class_triangle_a11404b7697462c37198f23b21bc9d644}\label{class_triangle_a11404b7697462c37198f23b21bc9d644} 
+QSet$<$ QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ $>$ {\bfseries closed\+Sides}
+\item 
+\Hypertarget{class_triangle_a06b229840845b947f4f9ded3585bea3b}\label{class_triangle_a06b229840845b947f4f9ded3585bea3b} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} {\bfseries ptr} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of 3 pointers to the triangle\textquotesingle{}s vertices. \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a54f9a2ff926e60626559043b21f5bb43}\label{class_triangle_a54f9a2ff926e60626559043b21f5bb43} 
+QString {\bfseries name} ="{}"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d}{compute\+Circle}} ()
+\begin{DoxyCompactList}\small\item\em Computes the circumcircle for the triangle and sets circum\+Center and circum\+Radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_triangle_a81b54984cefb55231f55bdfeac41a545}\label{class_triangle_a81b54984cefb55231f55bdfeac41a545} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries circum\+Center}
+\begin{DoxyCompactList}\small\item\em The center of the circumcircle (computed in compute\+Circle) \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}\label{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203} 
+float {\bfseries circum\+Radius}
+\begin{DoxyCompactList}\small\item\em The radius of the circumcircle (computed in compute\+Circle) \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a7f583b1f53acb36d618a013586bdb2ce}\label{class_triangle_a7f583b1f53acb36d618a013586bdb2ce} 
+QBrush {\bfseries brush}
+\begin{DoxyCompactList}\small\item\em The brush used to draw the triangle. \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a8111fa42515eee0ba748746365bac486}\label{class_triangle_a8111fa42515eee0ba748746365bac486} 
+bool {\bfseries is\+Highlited} = false
+\begin{DoxyCompactList}\small\item\em Indicates if the triangle is highlighted. \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_ab6fd305c3b7114988efe91366cfdc58d}\label{class_triangle_ab6fd305c3b7114988efe91366cfdc58d} 
+bool {\bfseries is\+Delaunay} = false
+\begin{DoxyCompactList}\small\item\em Indicates if the triangle satisfies the Delaunay condition. \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a32e1f2280671b7a4ceaf13da637d0d6e}\label{class_triangle_a32e1f2280671b7a4ceaf13da637d0d6e} 
+bool {\bfseries flippable} = false
+\begin{DoxyCompactList}\small\item\em Indicates if the triangle can be flipped (based on its configuration) \end{DoxyCompactList}\item 
+\Hypertarget{class_triangle_a380d1f403e848bb736586bbd15211fd6}\label{class_triangle_a380d1f403e848bb736586bbd15211fd6} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} {\bfseries flipp\+Point} = nullptr
+\begin{DoxyCompactList}\small\item\em The point making this triangle flippable (used during flipping) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_triangle}{Triangle} class represents a triangle in a 2D plane defined by three vertices. It provides methods for geometric operations such as checking if a point is inside the triangle, computing the circumcircle, and checking the Delaunay property. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]\doxylink{class_triangle}{Triangle} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_triangle_a27ba65a1d5db4b36848e3d6899e7ed36}\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_triangle_a27ba65a1d5db4b36848e3d6899e7ed36} 
+Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr1}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr2}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_triangle}{Triangle} with the given vertices and a default color (yellow). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr1} & Pointer to the first vertex of the triangle \\
+\hline
+{\em ptr2} & Pointer to the second vertex of the triangle \\
+\hline
+{\em ptr3} & Pointer to the third vertex of the triangle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_af5042c1a552178df98b2e2317a24e803}\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_triangle_af5042c1a552178df98b2e2317a24e803} 
+Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr1}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr2}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{ptr3}{, }\item[{const QColor \&}]{p\+\_\+color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_triangle}{Triangle} with the given vertices and a specified color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr1} & Pointer to the first vertex of the triangle \\
+\hline
+{\em ptr2} & Pointer to the second vertex of the triangle \\
+\hline
+{\em ptr3} & Pointer to the third vertex of the triangle \\
+\hline
+{\em p\+\_\+color} & The color to set for the triangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_triangle_a6cd8236a25745922faf396bf4bbd6ded}\index{Triangle@{Triangle}!checkDelaunay@{checkDelaunay}}
+\index{checkDelaunay@{checkDelaunay}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{checkDelaunay()}{checkDelaunay()}}
+{\footnotesize\ttfamily \label{class_triangle_a6cd8236a25745922faf396bf4bbd6ded} 
+bool Triangle\+::check\+Delaunay (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{tab\+Vertices}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the triangle satisfies the Delaunay condition by checking if the determinant of the matrix formed by the triangle\textquotesingle{}s vertices and a test point is non-\/positive for all points in tab\+Vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Vertices} & The list of vertices to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the triangle satisfies the Delaunay condition, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a35161ed8247d27691b99492961c16cb9}\index{Triangle@{Triangle}!checkIsOpen@{checkIsOpen}}
+\index{checkIsOpen@{checkIsOpen}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{checkIsOpen()}{checkIsOpen()}}
+{\footnotesize\ttfamily \label{class_triangle_a35161ed8247d27691b99492961c16cb9} 
+void Triangle\+::check\+Is\+Open (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$}]{triangles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the triangle is open based on its shared edges with other triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & A list of triangles to check against for shared edges. This function checks the edges of the current triangle and determines whether each edge is shared with another triangle. If at least one edge is not shared, the triangle is considered "{}open"{} and is added to the {\ttfamily open\+Sides} set. It updates the {\ttfamily is\+Open} status and inserts non-\/shared edges into the {\ttfamily open\+Sides} set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a9e8fb3bac838c95865165e61b14ee6bc}\index{Triangle@{Triangle}!circleContains@{circleContains}}
+\index{circleContains@{circleContains}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{circleContains()}{circleContains()}}
+{\footnotesize\ttfamily \label{class_triangle_a9e8fb3bac838c95865165e61b14ee6bc} 
+bool Triangle\+::circle\+Contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{M}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the point M is inside the circumcircle of the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & The point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if M is inside the circumcircle, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d}\index{Triangle@{Triangle}!computeCircle@{computeCircle}}
+\index{computeCircle@{computeCircle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{computeCircle()}{computeCircle()}}
+{\footnotesize\ttfamily \label{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d} 
+void Triangle\+::compute\+Circle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Computes the circumcircle for the triangle and sets circum\+Center and circum\+Radius. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]\doxylink{class_triangle}{Triangle} related methods \end{DoxyRefDesc}
+\Hypertarget{class_triangle_aba5922794392893f80af8de5b75e582b}\index{Triangle@{Triangle}!contains@{contains}}
+\index{contains@{contains}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily \label{class_triangle_aba5922794392893f80af8de5b75e582b} 
+bool Triangle\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{M}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the point M is one of the triangle\textquotesingle{}s vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & The point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if M is a vertex of the triangle, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a2ee48003aaf0a326c3866c7e2d61a261}\index{Triangle@{Triangle}!draw@{draw}}
+\index{draw@{draw}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_triangle_a2ee48003aaf0a326c3866c7e2d61a261} 
+void Triangle\+::draw (\begin{DoxyParamCaption}\item[{QPainter \&}]{painter}{}\end{DoxyParamCaption})}
+
+
+
+Draws the triangle using the provided QPainter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & The QPainter used to draw the triangle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_afa7613cc5c6e20df91f408166bd1aa61}\index{Triangle@{Triangle}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily \label{class_triangle_afa7613cc5c6e20df91f408166bd1aa61} 
+void Triangle\+::draw\+Circle (\begin{DoxyParamCaption}\item[{QPainter \&}]{painter}{}\end{DoxyParamCaption})}
+
+
+
+Draws the circumcircle of the triangle using the provided QPainter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & The QPainter used to draw the circumcircle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a8b8384238eeee2464c6952a7c534f60f}\index{Triangle@{Triangle}!flippIt@{flippIt}}
+\index{flippIt@{flippIt}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{flippIt()}{flippIt()}}
+{\footnotesize\ttfamily \label{class_triangle_a8b8384238eeee2464c6952a7c534f60f} 
+void Triangle\+::flipp\+It (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} \texorpdfstring{$\ast$}{*} $>$}]{triangles}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to flip the triangle with an adjacent triangle if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em triangles} & The list of neighboring triangles to check for a possible flip \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a1fa027b0ad66f77a65763a485d99ebd7}\index{Triangle@{Triangle}!getCircleCenter@{getCircleCenter}}
+\index{getCircleCenter@{getCircleCenter}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{getCircleCenter()}{getCircleCenter()}}
+{\footnotesize\ttfamily \label{class_triangle_a1fa027b0ad66f77a65763a485d99ebd7} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} Triangle\+::get\+Circle\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the center of the circumcircle of the triangle. 
+
+\begin{DoxyReturn}{Returns}
+The center of the circumcircle 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}\index{Triangle@{Triangle}!getOpposite@{getOpposite}}
+\index{getOpposite@{getOpposite}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{getOpposite()}{getOpposite()}}
+{\footnotesize\ttfamily \label{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} Triangle\+::get\+Opposite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the opposite point that makes this triangle flippable. 
+
+\begin{DoxyReturn}{Returns}
+The opposite point 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_acb129650e51a79a3af1de56673304320}\index{Triangle@{Triangle}!getVertexPtr@{getVertexPtr}}
+\index{getVertexPtr@{getVertexPtr}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{getVertexPtr()}{getVertexPtr()}}
+{\footnotesize\ttfamily \label{class_triangle_acb129650e51a79a3af1de56673304320} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} Triangle\+::get\+Vertex\+Ptr (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the pointer to the i-\/th vertex of the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the vertex (0, 1, or 2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the vertex at index i 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a2ecf064f3402d0fe6ab5624fb0e6ccda}\index{Triangle@{Triangle}!hasEdge@{hasEdge}}
+\index{hasEdge@{hasEdge}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{hasEdge()}{hasEdge()}}
+{\footnotesize\ttfamily \label{class_triangle_a2ecf064f3402d0fe6ab5624fb0e6ccda} 
+bool Triangle\+::has\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{A}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{B}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the triangle has the edge defined by points A and B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & One point of the edge \\
+\hline
+{\em B} & The other point of the edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the triangle has the edge (A, B), false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_afcaaedef11a6f06fb0eb778874f7a10b}\index{Triangle@{Triangle}!isFlippable@{isFlippable}}
+\index{isFlippable@{isFlippable}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{isFlippable()}{isFlippable()}}
+{\footnotesize\ttfamily \label{class_triangle_afcaaedef11a6f06fb0eb778874f7a10b} 
+bool Triangle\+::is\+Flippable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the triangle can be flipped. 
+
+\begin{DoxyReturn}{Returns}
+True if the triangle is flippable, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a994f6a50a894f5a919ea4b5cda7c109f}\index{Triangle@{Triangle}!isHighlighted@{isHighlighted}}
+\index{isHighlighted@{isHighlighted}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{isHighlighted()}{isHighlighted()}}
+{\footnotesize\ttfamily \label{class_triangle_a994f6a50a894f5a919ea4b5cda7c109f} 
+bool Triangle\+::is\+Highlighted (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the triangle is highlighted. 
+
+\begin{DoxyReturn}{Returns}
+True if the triangle is highlighted, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_aad6de8913e4bb6e9f8d929ffbb07a289}\index{Triangle@{Triangle}!isInside@{isInside}}
+\index{isInside@{isInside}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_triangle_aad6de8913e4bb6e9f8d929ffbb07a289} 
+bool Triangle\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{P}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the point P is inside the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside the triangle, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a2c84480dd64dd9d9f78142cd0f4a311b}\index{Triangle@{Triangle}!isInside@{isInside}}
+\index{isInside@{isInside}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_triangle_a2c84480dd64dd9d9f78142cd0f4a311b} 
+bool Triangle\+::is\+Inside (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the point (x, y) is inside the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the point \\
+\hline
+{\em y} & The y-\/coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside the triangle, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a6350e7211a97e18880ab8f03a1798425}\index{Triangle@{Triangle}!isOnTheLeft@{isOnTheLeft}}
+\index{isOnTheLeft@{isOnTheLeft}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{isOnTheLeft()}{isOnTheLeft()}}
+{\footnotesize\ttfamily \label{class_triangle_a6350e7211a97e18880ab8f03a1798425} 
+bool Triangle\+::is\+On\+The\+Left (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{P}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{P1}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{P2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if point P is to the left of the line formed by P1 and P2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The point to check \\
+\hline
+{\em P1} & The first point of the line \\
+\hline
+{\em P2} & The second point of the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if point P is on the left of the line, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_triangle_a9d9365aceb3f6e4f53867a0d37710cbb}\index{Triangle@{Triangle}!setColor@{setColor}}
+\index{setColor@{setColor}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_triangle_a9d9365aceb3f6e4f53867a0d37710cbb} 
+void Triangle\+::set\+Color (\begin{DoxyParamCaption}\item[{const QColor \&}]{p\+\_\+color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the color of the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+color} & The new color for the triangle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a650fc423f2b682cc33b47c5313463406}\index{Triangle@{Triangle}!setDelaunay@{setDelaunay}}
+\index{setDelaunay@{setDelaunay}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{setDelaunay()}{setDelaunay()}}
+{\footnotesize\ttfamily \label{class_triangle_a650fc423f2b682cc33b47c5313463406} 
+void Triangle\+::set\+Delaunay (\begin{DoxyParamCaption}\item[{bool}]{v}{, }\item[{bool}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether the triangle is Delaunay-\/compliant and whether it is flippable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & True if the triangle is Delaunay-\/compliant, false otherwise \\
+\hline
+{\em f} & True if the triangle is flippable, false otherwise \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a1eaa6931e3451fb195f24a2c1da5f2fc}\index{Triangle@{Triangle}!setHighlighted@{setHighlighted}}
+\index{setHighlighted@{setHighlighted}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{setHighlighted()}{setHighlighted()}}
+{\footnotesize\ttfamily \label{class_triangle_a1eaa6931e3451fb195f24a2c1da5f2fc} 
+void Triangle\+::set\+Highlighted (\begin{DoxyParamCaption}\item[{bool}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether the triangle should be highlighted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & True to highlight the triangle, false to remove the highlight \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a27f92765672968ee36819c38c377139b}\index{Triangle@{Triangle}!setOpposite@{setOpposite}}
+\index{setOpposite@{setOpposite}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{setOpposite()}{setOpposite()}}
+{\footnotesize\ttfamily \label{class_triangle_a27f92765672968ee36819c38c377139b} 
+void Triangle\+::set\+Opposite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the opposite point that makes this triangle flippable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The opposite point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_triangle_a4294661184d49e6bd3e29f023f2d58e1}\index{Triangle@{Triangle}!updateVertices@{updateVertices}}
+\index{updateVertices@{updateVertices}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{updateVertices()}{updateVertices()}}
+{\footnotesize\ttfamily \label{class_triangle_a4294661184d49e6bd3e29f023f2d58e1} 
+void Triangle\+::update\+Vertices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{\+\_\+A}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{\+\_\+B}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{\+\_\+C}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the vertices of the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+A} & The new first vertex \\
+\hline
+{\em \+\_\+B} & The new second vertex \\
+\hline
+{\em \+\_\+C} & The new third vertex \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/triangle.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/triangle.\+cpp\end{DoxyCompactItemize}

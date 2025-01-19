@@ -1,0 +1,275 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+The \doxylink{class_main_window}{Main\+Window} class represents the main graphical user interface of the application. It handles the window and provides slots for various actions triggered by the user.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_main_window}{Main\+Window} object and initializes the graphical interface. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_main_window}{Main\+Window} object and cleans up any resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_aeb95538df1a092864fbd9c1ef05bdc28}\label{class_main_window_aeb95538df1a092864fbd9c1ef05bdc28} 
+void {\bfseries on\+\_\+action\+New2\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+New"{} action, triggered when the user selects "{}\+New"{} from the menu. This slot can be used to create a new document or initialize a new state. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_aa68eba140c2cf5c1cd2b4bd81337fa83}\label{class_main_window_aa68eba140c2cf5c1cd2b4bd81337fa83} 
+void {\bfseries on\+\_\+action\+Quit\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Quit"{} action, triggered when the user selects "{}\+Quit"{} from the menu. This slot allows the application to exit gracefully. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ada6ecfabc8ccc186fb3134211099bcc8}\label{class_main_window_ada6ecfabc8ccc186fb3134211099bcc8} 
+void {\bfseries on\+\_\+action\+Load\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Load"{} action, triggered when the user selects "{}\+Load"{} from the menu. This slot allows loading a new file or data into the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a217d51c631b720f86ec21d85758cbcf8}{on\+\_\+action\+Circles\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Circles"{} action, triggered when toggling the circles option. This slot controls whether circles should be shown in the graphical interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a493b04bdb535b924fe099a43045c79f0}{on\+\_\+action\+Triangles\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Triangles"{} action, triggered when toggling the triangles option. This slot controls whether triangles should be shown in the graphical interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aebda705f27cd9e017807a8f0d96df26e}{on\+\_\+action\+Center\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Center"{} action, triggered when toggling the center option. This slot controls whether the center should be shown in the graphical interface. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a4f3ebda1ba39e0ef4d678b44893c9c7f}\label{class_main_window_a4f3ebda1ba39e0ef4d678b44893c9c7f} 
+void {\bfseries on\+\_\+action\+About\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+About"{} action, triggered when the user selects "{}\+About"{} from the menu. This slot shows information about the application, such as version, authors, etc. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ae1f4934cb3d376225f7576ab05159bc0}\label{class_main_window_ae1f4934cb3d376225f7576ab05159bc0} 
+void {\bfseries on\+\_\+action\+Check\+\_\+\+Delaunay\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Check Delaunay"{} action, triggered when the user selects this option from the menu. This slot checks whether the current triangulation satisfies the Delaunay condition. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ae652bfd7eb9af77488c6febd68083602}\label{class_main_window_ae652bfd7eb9af77488c6febd68083602} 
+void {\bfseries on\+\_\+action\+Process\+\_\+flip\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Flip Process"{} action, triggered for a flip operation. This slot allows flipping non-\/\+Delaunay triangles to ensure Delaunay condition is met. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a65d472355e925956cb542d7d5cfd0904}\label{class_main_window_a65d472355e925956cb542d7d5cfd0904} 
+void {\bfseries on\+\_\+action\+Voronoi\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}\+Voronoi"{} action, triggered to generate the \doxylink{class_voronoi}{Voronoi} diagram. This slot allows the application to generate and display the \doxylink{class_voronoi}{Voronoi} diagram. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ad9ef5d9407a855186edecf20d538651e}\label{class_main_window_ad9ef5d9407a855186edecf20d538651e} 
+void {\bfseries on\+\_\+action\+Load\+\_\+\+Servers\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Load Servers"{} action is executed. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a8a8d1a5ea4f7c6a8ff2f100bf0092f0b}\label{class_main_window_a8a8d1a5ea4f7c6a8ff2f100bf0092f0b} 
+void {\bfseries on\+\_\+action\+New\+\_\+2\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+New 2"{} action is executed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_afc4e9d93875e85bebfa762d1a60523e7}{on\+\_\+action\+Servers\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Servers"{} action is toggled. Shows or hides the servers in the visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a7c0739d4e21a7ac4c3d787071629ecd0}{on\+\_\+action\+Routes\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Routes"{} action is toggled. Shows or hides the routes in the visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4c021c74635da0011049afd7369a334f}{on\+\_\+action\+Shared\+\_\+sides\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Shared Sides"{} action is toggled. Shows or hides shared sides in the visualization. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_afce1411fa5de59492a11b5d1a868ec51}\label{class_main_window_afce1411fa5de59492a11b5d1a868ec51} 
+void {\bfseries create\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Creates the graph representation for the network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a5609f25b4cb7da550693e7bdf1cd2faa}{get\+Server}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}v)
+\begin{DoxyCompactList}\small\item\em Returns the server corresponding to the given \doxylink{class_vector2_d}{Vector2D} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ac2a270cd0dbaf45d2c14ae293a83a309}{on\+\_\+action\+Server\+\_\+routes\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Server Routes"{} action is toggled. Shows or hides the server routes in the visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aee78080ea06d30a8d79a77304145ca90}{on\+\_\+action\+Next\+\_\+steps\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Next Steps"{} action is toggled. Shows or hides the next steps for the drones in the visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a5d500d6dfce8ab8be0d8dda6b052b3dc}{on\+\_\+action\+Enable\+\_\+\+Disable\+\_\+triggered}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Triggered when the "{}\+Enable/\+Disable"{} action is toggled. Enables or disables the movement of drones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5} 
+Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} {\bfseries ui}
+\begin{DoxyCompactList}\small\item\em Pointer to the graphical interface object that contains UI components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_main_window}{Main\+Window} class represents the main graphical user interface of the application. It handles the window and provides slots for various actions triggered by the user. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{class_main_window}{Main\+Window} object and initializes the graphical interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QWidget, default is nullptr.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Main window logic, canvas updates, mesh loading, and Delaunay operations. \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_window_a5609f25b4cb7da550693e7bdf1cd2faa}\index{MainWindow@{MainWindow}!getServer@{getServer}}
+\index{getServer@{getServer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getServer}{getServer}}
+{\footnotesize\ttfamily \label{class_main_window_a5609f25b4cb7da550693e7bdf1cd2faa} 
+\mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*} Main\+Window\+::get\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Returns the server corresponding to the given \doxylink{class_vector2_d}{Vector2D} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The \doxylink{class_vector2_d}{Vector2D} object representing the server\textquotesingle{}s location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The server associated with the given location. 
+\end{DoxyReturn}
+\Hypertarget{class_main_window_aebda705f27cd9e017807a8f0d96df26e}\index{MainWindow@{MainWindow}!on\_actionCenter\_triggered@{on\_actionCenter\_triggered}}
+\index{on\_actionCenter\_triggered@{on\_actionCenter\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionCenter\_triggered}{on\_actionCenter\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_aebda705f27cd9e017807a8f0d96df26e} 
+void Main\+Window\+::on\+\_\+action\+Center\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the "{}\+Center"{} action, triggered when toggling the center option. This slot controls whether the center should be shown in the graphical interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Indicates whether the "{}\+Center"{} option is checked (true) or unchecked (false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_a217d51c631b720f86ec21d85758cbcf8}\index{MainWindow@{MainWindow}!on\_actionCircles\_triggered@{on\_actionCircles\_triggered}}
+\index{on\_actionCircles\_triggered@{on\_actionCircles\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionCircles\_triggered}{on\_actionCircles\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a217d51c631b720f86ec21d85758cbcf8} 
+void Main\+Window\+::on\+\_\+action\+Circles\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the "{}\+Circles"{} action, triggered when toggling the circles option. This slot controls whether circles should be shown in the graphical interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Indicates whether the "{}\+Circles"{} option is checked (true) or unchecked (false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_a5d500d6dfce8ab8be0d8dda6b052b3dc}\index{MainWindow@{MainWindow}!on\_actionEnable\_Disable\_triggered@{on\_actionEnable\_Disable\_triggered}}
+\index{on\_actionEnable\_Disable\_triggered@{on\_actionEnable\_Disable\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionEnable\_Disable\_triggered}{on\_actionEnable\_Disable\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a5d500d6dfce8ab8be0d8dda6b052b3dc} 
+void Main\+Window\+::on\+\_\+action\+Enable\+\_\+\+Disable\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Enable/\+Disable"{} action is toggled. Enables or disables the movement of drones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for enabled, false for disabled). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_aee78080ea06d30a8d79a77304145ca90}\index{MainWindow@{MainWindow}!on\_actionNext\_steps\_triggered@{on\_actionNext\_steps\_triggered}}
+\index{on\_actionNext\_steps\_triggered@{on\_actionNext\_steps\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionNext\_steps\_triggered}{on\_actionNext\_steps\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_aee78080ea06d30a8d79a77304145ca90} 
+void Main\+Window\+::on\+\_\+action\+Next\+\_\+steps\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Next Steps"{} action is toggled. Shows or hides the next steps for the drones in the visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for checked, false for unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_a7c0739d4e21a7ac4c3d787071629ecd0}\index{MainWindow@{MainWindow}!on\_actionRoutes\_triggered@{on\_actionRoutes\_triggered}}
+\index{on\_actionRoutes\_triggered@{on\_actionRoutes\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionRoutes\_triggered}{on\_actionRoutes\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a7c0739d4e21a7ac4c3d787071629ecd0} 
+void Main\+Window\+::on\+\_\+action\+Routes\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Routes"{} action is toggled. Shows or hides the routes in the visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for checked, false for unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_ac2a270cd0dbaf45d2c14ae293a83a309}\index{MainWindow@{MainWindow}!on\_actionServer\_routes\_triggered@{on\_actionServer\_routes\_triggered}}
+\index{on\_actionServer\_routes\_triggered@{on\_actionServer\_routes\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionServer\_routes\_triggered}{on\_actionServer\_routes\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_ac2a270cd0dbaf45d2c14ae293a83a309} 
+void Main\+Window\+::on\+\_\+action\+Server\+\_\+routes\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Server Routes"{} action is toggled. Shows or hides the server routes in the visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for checked, false for unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_afc4e9d93875e85bebfa762d1a60523e7}\index{MainWindow@{MainWindow}!on\_actionServers\_triggered@{on\_actionServers\_triggered}}
+\index{on\_actionServers\_triggered@{on\_actionServers\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionServers\_triggered}{on\_actionServers\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_afc4e9d93875e85bebfa762d1a60523e7} 
+void Main\+Window\+::on\+\_\+action\+Servers\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Servers"{} action is toggled. Shows or hides the servers in the visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for checked, false for unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_a4c021c74635da0011049afd7369a334f}\index{MainWindow@{MainWindow}!on\_actionShared\_sides\_triggered@{on\_actionShared\_sides\_triggered}}
+\index{on\_actionShared\_sides\_triggered@{on\_actionShared\_sides\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionShared\_sides\_triggered}{on\_actionShared\_sides\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a4c021c74635da0011049afd7369a334f} 
+void Main\+Window\+::on\+\_\+action\+Shared\+\_\+sides\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the "{}\+Shared Sides"{} action is toggled. Shows or hides shared sides in the visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & The toggle state (true for checked, false for unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_a493b04bdb535b924fe099a43045c79f0}\index{MainWindow@{MainWindow}!on\_actionTriangles\_triggered@{on\_actionTriangles\_triggered}}
+\index{on\_actionTriangles\_triggered@{on\_actionTriangles\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionTriangles\_triggered}{on\_actionTriangles\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a493b04bdb535b924fe099a43045c79f0} 
+void Main\+Window\+::on\+\_\+action\+Triangles\+\_\+triggered (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the "{}\+Triangles"{} action, triggered when toggling the triangles option. This slot controls whether triangles should be shown in the graphical interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Indicates whether the "{}\+Triangles"{} option is checked (true) or unchecked (false). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/mainwindow.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/mainwindow.\+cpp\end{DoxyCompactItemize}

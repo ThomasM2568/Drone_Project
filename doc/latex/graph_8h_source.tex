@@ -1,0 +1,55 @@
+\doxysection{graph.\+h}
+\hypertarget{graph_8h_source}{}\label{graph_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/graph.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GRAPH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GRAPH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{\string~Graph}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a2866cdbd6c08c2494aace528a1d51e0d}{addNode}}(\textcolor{keyword}{const}\ QString\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_a248551b13649d44f7c117fc577508914}{addNode2}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a1096d26434652b464bd26a08b40e1f15}{printAdjacencyMatrix}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_graph_ad6db99013690c65d67b2ba3ced68ccb5}{getNode}}(\textcolor{keyword}{const}\ QString\&\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ QList<Node*>\&\ \mbox{\hyperlink{class_graph_a0f7b28703111ea9290b073be89b1cea4}{getNodes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ QSet<Node*>\ \mbox{\hyperlink{class_graph_a909be22eea9c1dca1f3b66c6939305ea}{findArticulationPoints}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ QList<QList<Node*>>\ \mbox{\hyperlink{class_graph_a1def767121e7e6188a524ee16eca1f5c}{findClusters}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_graph_aa8f850f918d083f5e60b127b7891bec2}{dijkstra}}(\mbox{\hyperlink{class_node}{Node}}*\ startNode,\ \mbox{\hyperlink{class_node}{Node}}*\ endNode,\ QList<Node*>\&\ path);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a7a3cf0e7d74eeaccc90de5094c6ae298}{addEdge}}(\mbox{\hyperlink{class_node}{Node}}\ *node1,\ \mbox{\hyperlink{class_node}{Node}}\ *node2);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a7a3cf0e7d74eeaccc90de5094c6ae298}{addEdge}}(\textcolor{keywordtype}{int}\ nodeID1,\ \textcolor{keywordtype}{int}\ nodeID2);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_graph_ad6db99013690c65d67b2ba3ced68ccb5}{getNode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_ab594e521a64cfd3652e70ce1e08b5afa}{getNextId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00104\ \ \ \ \ QList<Node*>\ \mbox{\hyperlink{class_graph_a7128877029a0a9ca35b155c39bf12397}{nodes}};\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a520be0d62341329125b150817ac32795}{DFS}}(\mbox{\hyperlink{class_node}{Node}}*\ node,\ QSet<Node*>\&\ visited,\ QList<Node*>\&\ cluster);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_aa0fe4ad953dc9bcf52f4e870678eafb9}{DFSArticulationPoints}}(\mbox{\hyperlink{class_node}{Node}}*\ node,\ QMap<Node*,\ bool>\&\ visited,\ QMap<Node*,\ int>\&\ discoveryTime,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QMap<Node*,\ int>\&\ lowTime,\ QMap<Node*,\ Node*>\&\ parent,\ QSet<Node*>\&\ articulationPoints,\ \textcolor{keywordtype}{int}\&\ time);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GRAPH\_H}}
+
+\end{DoxyCode}

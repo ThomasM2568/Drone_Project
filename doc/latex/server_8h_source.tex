@@ -1,0 +1,38 @@
+\doxysection{server.\+h}
+\hypertarget{server_8h_source}{}\label{server_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/server.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/server.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}vector2d.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classserver_ae034429a5a7b00634c6881444bccf38a}{server}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\mbox{\hyperlink{classserver_a2d42e5cfd564b8b3b6b63474097dc488}{y}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{classserver_a74138cc7926927023e14d0517d558fe4}{point}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ QColor\ \mbox{\hyperlink{classserver_a8f1cea496680c1c05a482b24cc8e6f55}{color}}\ =\ QColor(\textcolor{stringliteral}{"{}\#0eeb0e"{}});\ }
+\DoxyCodeLine{00026\ \ \ \ \ QString\ \mbox{\hyperlink{classserver_ac2249051e11153735a620d82f93a272a}{name}}=\textcolor{stringliteral}{"{}"{}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classserver_ae034429a5a7b00634c6881444bccf38a}{server}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ n\_point);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classserver_ae034429a5a7b00634c6881444bccf38a}{server}}(\textcolor{keywordtype}{float}\ \_x,\textcolor{keywordtype}{float}\ \_y,\ QColor\ \_color,\ QString\ \_name)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ x=\_x;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classserver_a2d42e5cfd564b8b3b6b63474097dc488}{y}}=\_y;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classserver_a8f1cea496680c1c05a482b24cc8e6f55}{color}}=\_color;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classserver_ac2249051e11153735a620d82f93a272a}{name}}=\_name;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classserver_abc4c0feb2f34e5b577fc00546741ec1b}{findShortestTransmissionPath}}(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ \ \mbox{\hyperlink{class_node}{Node}}\ *startNode,\ \ \mbox{\hyperlink{class_node}{Node}}\ *endNode);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \ \ \ \ QList<Node*>\ \mbox{\hyperlink{classserver_af5265227c7fb9f128d1a7d447d21f6cd}{findNextHopToServer}}(\mbox{\hyperlink{class_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{class_graph}{Graph}}*\ networkGraph,\ \ \mbox{\hyperlink{class_node}{Node}}\ *startNode,\ \ \mbox{\hyperlink{class_node}{Node}}\ *endNode);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERVER\_H}}
+
+\end{DoxyCode}

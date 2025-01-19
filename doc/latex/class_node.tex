@@ -1,0 +1,200 @@
+\doxysection{Node Class Reference}
+\hypertarget{class_node}{}\label{class_node}\index{Node@{Node}}
+
+
+The \doxylink{class_node}{Node} class represents a node in a graph, with a unique ID, position, and a list of neighboring nodes (edges).  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a2791559360966137a418c4506b087aa7}{Node}} (const QString \&\mbox{\hyperlink{class_node_ae8628217a021eed54b867d159559042b}{id}}, float \mbox{\hyperlink{class_node_a3a6b88b82c51d21305656d01e3c53039}{x}}, float \mbox{\hyperlink{class_node_a0658e9aa67d95daa5da3cca23b13f6de}{y}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a node with an ID and position. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_node_a08b32af80d37050e81ba41b6aae7b1c7}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unique ID of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a72e703ec3f48fe8bf49b2fb9a800d21e}{add\+Edge}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}neighbor)
+\begin{DoxyCompactList}\small\item\em Adds an edge between this node and a neighbor node. \end{DoxyCompactList}\item 
+const QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_node_adf561aec4ae0c4c9a411a7c3b24adeef}{get\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of neighboring nodes (edges). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_afd05b423c3229fc5bb372d2d69f4ea77}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Returns the position of the node. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_node_a87368ca7d92da5c79fbc1081f693537b}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Returns the x-\/coordinate of the node. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_node_a07379dfb4664e987e94d761bff3631ef}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Returns the y-\/coordinate of the node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_node_acd6ae26418fce3726eff6246b7409630}{has\+Edge\+To}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}other) const
+\begin{DoxyCompactList}\small\item\em Checks if there is an edge between this node and another node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_node_a120e57065e8bf8f37a615591fbcbda0c}\label{class_node_a120e57065e8bf8f37a615591fbcbda0c} 
+QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries edges}
+\begin{DoxyCompactList}\small\item\em List of connected nodes (edges) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_node_ae8628217a021eed54b867d159559042b}\label{class_node_ae8628217a021eed54b867d159559042b} 
+QString {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the node. \end{DoxyCompactList}\item 
+\Hypertarget{class_node_a3a6b88b82c51d21305656d01e3c53039}\label{class_node_a3a6b88b82c51d21305656d01e3c53039} 
+float {\bfseries x}
+\begin{DoxyCompactList}\small\item\em X coordinate. \end{DoxyCompactList}\item 
+\Hypertarget{class_node_a0658e9aa67d95daa5da3cca23b13f6de}\label{class_node_a0658e9aa67d95daa5da3cca23b13f6de} 
+float {\bfseries y}
+\begin{DoxyCompactList}\small\item\em Y coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_node}{Node} class represents a node in a graph, with a unique ID, position, and a list of neighboring nodes (edges). 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]\doxylink{class_node}{Node} related methods \end{DoxyRefDesc}
+
+
+This class has methodes to manage and access node properties, including its position, connected edges, and unique identifier. It also supports basic operations such as adding edges and checking for connections to other nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_node_a2791559360966137a418c4506b087aa7}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily \label{class_node_a2791559360966137a418c4506b087aa7} 
+Node\+::\+Node (\begin{DoxyParamCaption}\item[{const QString \&}]{id}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize a node with an ID and position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the node. \\
+\hline
+{\em x} & The x-\/coordinate of the node. \\
+\hline
+{\em y} & The y-\/coordinate of the node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000012}{Todo}}]\doxylink{class_node}{Node} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_node_a72e703ec3f48fe8bf49b2fb9a800d21e}\index{Node@{Node}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily \label{class_node_a72e703ec3f48fe8bf49b2fb9a800d21e} 
+void Node\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{neighbor}{}\end{DoxyParamCaption})}
+
+
+
+Adds an edge between this node and a neighbor node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbor} & A pointer to the neighboring node to add an edge with. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_node_adf561aec4ae0c4c9a411a7c3b24adeef}\index{Node@{Node}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily \label{class_node_adf561aec4ae0c4c9a411a7c3b24adeef} 
+const QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \& Node\+::get\+Edges (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the list of neighboring nodes (edges). 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to a list of neighboring nodes. 
+\end{DoxyReturn}
+\Hypertarget{class_node_a08b32af80d37050e81ba41b6aae7b1c7}\index{Node@{Node}!getId@{getId}}
+\index{getId@{getId}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_node_a08b32af80d37050e81ba41b6aae7b1c7} 
+QString Node\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the unique ID of the node. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the node. 
+\end{DoxyReturn}
+\Hypertarget{class_node_afd05b423c3229fc5bb372d2d69f4ea77}\index{Node@{Node}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_node_afd05b423c3229fc5bb372d2d69f4ea77} 
+const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} Node\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the position of the node. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the \doxylink{class_vector2_d}{Vector2D} representing the position of the node. 
+\end{DoxyReturn}
+\Hypertarget{class_node_a87368ca7d92da5c79fbc1081f693537b}\index{Node@{Node}!getX@{getX}}
+\index{getX@{getX}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_node_a87368ca7d92da5c79fbc1081f693537b} 
+float Node\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the x-\/coordinate of the node. 
+
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate of the node. 
+\end{DoxyReturn}
+\Hypertarget{class_node_a07379dfb4664e987e94d761bff3631ef}\index{Node@{Node}!getY@{getY}}
+\index{getY@{getY}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_node_a07379dfb4664e987e94d761bff3631ef} 
+float Node\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the y-\/coordinate of the node. 
+
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate of the node. 
+\end{DoxyReturn}
+\Hypertarget{class_node_acd6ae26418fce3726eff6246b7409630}\index{Node@{Node}!hasEdgeTo@{hasEdgeTo}}
+\index{hasEdgeTo@{hasEdgeTo}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{hasEdgeTo()}{hasEdgeTo()}}
+{\footnotesize\ttfamily \label{class_node_acd6ae26418fce3726eff6246b7409630} 
+bool Node\+::has\+Edge\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if there is an edge between this node and another node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the other node to check for an edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there is an edge, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/node.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/node.\+cpp\end{DoxyCompactItemize}

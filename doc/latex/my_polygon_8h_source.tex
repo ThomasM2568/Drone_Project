@@ -1,0 +1,84 @@
+\doxysection{my\+Polygon.\+h}
+\hypertarget{my_polygon_8h_source}{}\label{my_polygon_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/myPolygon.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/myPolygon.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MYPOLYGON\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MYPOLYGON\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}vector2d.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}triangle.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_polygon_aafdb38fa69d419e22b24db985b73ca9c}{MyPolygon}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_my_polygon_af45e7882b36f0b9702d45b1757f920e0}{Nmax}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_my_polygon_a45661c328421c76477145ec42d46ca5d}{N}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ *\mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ QVector<Triangle>\ \mbox{\hyperlink{class_my_polygon_a2211051569fcfc71715284076980a832}{triangles}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ QColor\ \mbox{\hyperlink{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe}{currentColor}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_my_polygon_ab2173c4b2b43c71100b43c9d33fb5035}{center}}\ =\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}(0,0);\ }
+\DoxyCodeLine{00028\ \ \ \ \ QVector<Vector2D*>\ \mbox{\hyperlink{class_my_polygon_a9dc00e18b374ef7cd7e0fb0603a81b7d}{serverList}};\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_my_polygon_ab0da614fe94c9b687a68cd4ab1e3c182}{isOpen}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00031\ \ \ \ \ QMap<MyPolygon*,\ QPair<Vector2D,\ Vector2D>>\ \mbox{\hyperlink{class_my_polygon_a1a3f4df029b0aec64c97d455909f6b65}{sharedSides}};\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_my_polygon_aafdb38fa69d419e22b24db985b73ca9c}{MyPolygon}}(\textcolor{keywordtype}{int}\ p\_Nmax):\mbox{\hyperlink{class_my_polygon_af45e7882b36f0b9702d45b1757f920e0}{Nmax}}(p\_Nmax)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_polygon_a45661c328421c76477145ec42d46ca5d}{N}}=0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}[\mbox{\hyperlink{class_my_polygon_af45e7882b36f0b9702d45b1757f920e0}{Nmax}}+1];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe}{currentColor}}=Qt::green;}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_my_polygon_a94e1a0a9e8468dbf12073b5d12448106}{\string~MyPolygon}}()\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ []\ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{class_my_polygon_a53e2d8e36d91919c1f1bda17b76c9a1d}{getVertexPtr}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}[i];}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{class_my_polygon_a1d6a063335b5d2fb142e81408ecd3a2a}{getVertex}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_my_polygon_a512bc6f335730d69420212692d8576d2}{getVertexSize}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_my_polygon_a45661c328421c76477145ec42d46ca5d}{N}};}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_polygon_a855da59df5a1b049e5011b890b48227d}{addVertex}}(\textcolor{keywordtype}{float}\ x,\textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ QPair<Vector2D,Vector2D>\ \mbox{\hyperlink{class_my_polygon_ae2adb6a5f9cdb5bb6a979bfc94d6d39b}{getBoundingBox}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{class_my_polygon_a29e325746b0e644ceee3d612ad8e4cdd}{getCenter}}()\ \{\textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{class_my_polygon_ab2173c4b2b43c71100b43c9d33fb5035}{center}};\}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_my_polygon_a42ef482a4c8b9e5d86378037da96a2e8}{calculateCentroid}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_polygon_a8278555c2df2a71deb1ab38fe5a589b8}{setColor}}(\textcolor{keyword}{const}\ QColor\ c)\ \{\ \mbox{\hyperlink{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe}{currentColor}}=c;\ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ QColor\ \mbox{\hyperlink{class_my_polygon_a01557774ee9d2126f7fc1a05ed1d8e4f}{getColor}}()\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe}{currentColor}};\}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_my_polygon_af89b87aa476b9b61e705ac55eed5ad48}{hasEdge}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\ A,\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ B)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<\mbox{\hyperlink{class_my_polygon_a45661c328421c76477145ec42d46ca5d}{N}}-\/1;i++)\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((\mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}[i]==A\ \&\&\ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}[i+1]==B)\ ||\ (\mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}[i+1]==A\ \&\&\ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}}[i]==B))\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_polygon_a553e9ef3be4449891d8f2d7e97917011}{draw}}(QPainter\ \&painter,\textcolor{keywordtype}{bool}\ showTriangles);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{class_my_polygon_a2f9182caf4d6199aa4268e05f74bcb2c}{getVertices}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}{tabPts}};\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_polygon_aef93d1d477137ad49505680ed1f34bfc}{getSharedSides}}(QVector<MyPolygon*>\ polygons);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_my_polygon_aea68d0ddcb1d8b517bbe03d6a639ef02}{isPointInside}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ point);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ QVector<Vector2D*>\ \mbox{\hyperlink{class_my_polygon_ac34fb006854b02cd49a1fd024dfac478}{getServerList}}()\textcolor{keyword}{\ const}\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_my_polygon_a9dc00e18b374ef7cd7e0fb0603a81b7d}{serverList}};\}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MYPOLYGON\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,608 @@
+\doxysection{my\+Drone Class Reference}
+\hypertarget{classmy_drone}{}\label{classmy_drone}\index{myDrone@{myDrone}}
+
+
+The \doxylink{classmy_drone}{my\+Drone} class represents a drone including movement, collision detection, route planning, and state management.  
+
+
+
+
+{\ttfamily \#include $<$drone.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmy_drone_a219f2c100ad5c4bbb6b350a7024d93ad}\label{classmy_drone_a219f2c100ad5c4bbb6b350a7024d93ad} 
+enum {\bfseries my\+Drone\+Status} \{ \newline
+{\bfseries landed}
+, {\bfseries takeoff}
+, {\bfseries landing}
+, {\bfseries hovering}
+, \newline
+{\bfseries turning}
+, {\bfseries flying}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac}{my\+Drone}} (const QString \&\mbox{\hyperlink{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}{name}}, const QColor \&\mbox{\hyperlink{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}{color}}, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&initial\+Position, const QString \&\mbox{\hyperlink{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}{server\+Address}})
+\item 
+\Hypertarget{classmy_drone_a30a94076da5b1b954ef03436ad21867a}\label{classmy_drone_a30a94076da5b1b954ef03436ad21867a} 
+{\bfseries my\+Drone} (int \mbox{\hyperlink{classmy_drone_a91489071f2cbeac753f2b6e09edb949f}{id}}, const QString \&\mbox{\hyperlink{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}{name}}, const QColor \&\mbox{\hyperlink{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}{color}}, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&initial\+Position, const QString \&\mbox{\hyperlink{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}{server\+Address}})
+\item 
+\Hypertarget{classmy_drone_a5537d516c0a873688eb7b63c76e5e695}\label{classmy_drone_a5537d516c0a873688eb7b63c76e5e695} 
+void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em Starts the drone\textquotesingle{}s movement or process. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a68fd126455c1031c9a203388b67e15f0}\label{classmy_drone_a68fd126455c1031c9a203388b67e15f0} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Stops the drone\textquotesingle{}s movement or process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_adee6be6344d32e11a73c7a82cb58e02c}{set\+Speed}} (double \mbox{\hyperlink{classmy_drone_a50392b023e05db5db2af183b8cb17d41}{speed}})
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a32ea0636ae4256bdfe10897d461a6f1c}{set\+Initial\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{classmy_drone_a397b544944480dd220aa06e4abbc4f50}{position}})
+\begin{DoxyCompactList}\small\item\em Sets the initial position of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a33103a690676633b4365c8f96f0064f5}{set\+Go\+To\+Position}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&server\+List)
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s destination based on a list of servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a55ffd65fd07cfe6314c4dcb0d31ff404}{set\+Go\+To\+Position}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{classserver}{server}})
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s destination to a specific server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_afb5d7638cc28fe7b19b444d105675dea}{set\+Go\+To\+Position}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classserver}{server}})
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s destination to a specific server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_abf4b24ad01960a75230abd9709aa56a2}{set\+Goal\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{classmy_drone_a397b544944480dd220aa06e4abbc4f50}{position}})
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s goal position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_afdf76fda1789e17abd885c47d10359d9}{set\+Goal\+Position}} (const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&server\+List)
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s goal position based on a list of servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_ae94af7580b88fef4adad471190f48f0f}{set\+Position}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classserver}{server}})
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s position to a specific server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a785ac09d7fbdb544ae7630afd3b5a6d6}{set\+Position}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s position based on x and y coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classmy_drone_aaf120ac7d83cabb7052fb70069e547df}{get\+Goal\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the drone\textquotesingle{}s goal position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classmy_drone_a87a4682c80a00290fbd341a98e2ebba8}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the drone\textquotesingle{}s current position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classmy_drone_a107f83f7b18c1c85df60df1cabb77e84}{get\+Go\+To\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position the drone is heading to. \end{DoxyCompactList}\item 
+my\+Drone\+Status \mbox{\hyperlink{classmy_drone_a0cded5d0516a45fba42686fbdf3ab5b6}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current status of the drone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_drone_a3a309d6483e735575a7384f3d9109a3d}{get\+Is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the drone is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_ae2a820b040457ba25441b5b73d40d2c1}{set\+Is\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Sets the drone\textquotesingle{}s active status. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classmy_drone_a3721d34450e2eca19977188c0eaee01a}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the drone. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_drone_aa7da1724fa2d83c47d98fedf82f4c83e}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the drone. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmy_drone_a0099e08a4b3c534feaf6315db7245639}{get\+Azimut}} () const
+\begin{DoxyCompactList}\small\item\em Gets the azimuth of the drone. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmy_drone_a3ac5e56e284ecd8dccfde5ced690a360}{get\+Power}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current power level of the drone. \end{DoxyCompactList}\item 
+QColor \mbox{\hyperlink{classmy_drone_a8513b51648513148fd5196f1ac0e6877}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the color of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a66157786bc935020fb93a8a861312328}{update}} (double dt)
+\begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s state. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a22df5b578889005a2598d491b6617ce4}\label{classmy_drone_a22df5b578889005a2598d491b6617ce4} 
+void {\bfseries init\+Collision} ()
+\begin{DoxyCompactList}\small\item\em Initializes the collision detection system for the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a291b25e7ea08648ccc7abff056d21fe6}{add\+Collision}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&other, float threshold)
+\begin{DoxyCompactList}\small\item\em Adds a potential collision to the drone\textquotesingle{}s collision detection system. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmy_drone_af70dbb202b21637dc4cd448cd8032e1c}{has\+Collision}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the drone has a collision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_a9ceb049d99f5dc7dc4ca904252d723bf}{update\+Position}} (double dt)
+\begin{DoxyCompactList}\small\item\em Updates the position of the drone based on the time step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_drone_afe65be1facefbf2540e100583732ed15}{set\+Route}} (\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, \mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}network\+Graph, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}start\+Node, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}end\+Node, \mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Sets the route for the drone using graph pointers and specified start and end nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmy_drone_aacf7483c48ab9b99e63c6be5917eab3e}\label{classmy_drone_aacf7483c48ab9b99e63c6be5917eab3e} 
+const double {\bfseries max\+Speed} = 50
+\begin{DoxyCompactList}\small\item\em Maximum speed of the drone in pixels per second. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a799b4f381c71df27abcaa10cd3897276}\label{classmy_drone_a799b4f381c71df27abcaa10cd3897276} 
+const double {\bfseries max\+Power} = 200
+\begin{DoxyCompactList}\small\item\em Maximum power available for the drone\textquotesingle{}s motors. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a8566368621b0f4b0862eb8778c280e8d}\label{classmy_drone_a8566368621b0f4b0862eb8778c280e8d} 
+const double {\bfseries takeoff\+Speed} = 2.\+5
+\begin{DoxyCompactList}\small\item\em Speed (in units per second) at which the drone takes off. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a46185411dfbb67e9e14b06e6ba515024}\label{classmy_drone_a46185411dfbb67e9e14b06e6ba515024} 
+const double {\bfseries hovering\+Height} = 5
+\begin{DoxyCompactList}\small\item\em The height (in units) at which the drone hovers. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a113565f81df6f54ed92ddc6fda8a2ffc}\label{classmy_drone_a113565f81df6f54ed92ddc6fda8a2ffc} 
+const double {\bfseries coef\+Collision} = 1000
+\begin{DoxyCompactList}\small\item\em Coefficient used for collision avoidance calculations. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_ae4adfa7d5bfe57246abec186ddfd871a}\label{classmy_drone_ae4adfa7d5bfe57246abec186ddfd871a} 
+const double {\bfseries damping} = 0.\+2
+\begin{DoxyCompactList}\small\item\em Damping factor for simulating motion (slows down the drone over time). \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a24d340b3b048be7a6ec616b21e615edd}\label{classmy_drone_a24d340b3b048be7a6ec616b21e615edd} 
+const double {\bfseries charging\+Speed} = 10
+\begin{DoxyCompactList}\small\item\em Rate at which the drone charges its power (units of power per second). \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a7e5a88588c7515265e1a7cf6a738ec7f}\label{classmy_drone_a7e5a88588c7515265e1a7cf6a738ec7f} 
+const double {\bfseries power\+Consumption} = 5
+\begin{DoxyCompactList}\small\item\em Rate at which the drone consumes power during flight (units of power per second). \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_abbea6b8d34cc116c0fd156c6074aeec3}\label{classmy_drone_abbea6b8d34cc116c0fd156c6074aeec3} 
+QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries route}
+\begin{DoxyCompactList}\small\item\em A list that holds the nodes of the drone\textquotesingle{}s flight path (route). \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_ae58db1a654b9490375e5b211daf0e270}\label{classmy_drone_ae58db1a654b9490375e5b211daf0e270} 
+bool {\bfseries route\+Initialized} = false
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the drone\textquotesingle{}s route has been initialized. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a2b8bbcc8a1bbb10ae56e3ae560e24704}\label{classmy_drone_a2b8bbcc8a1bbb10ae56e3ae560e24704} 
+int {\bfseries current\+Node\+Index}
+\begin{DoxyCompactList}\small\item\em Index of the current node in the route that the drone is heading towards. \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_aa527fc6642029a54c05a2c7f89264199}\label{classmy_drone_aa527fc6642029a54c05a2c7f89264199} 
+bool {\bfseries is\+Active} = true
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the drone is currently active or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmy_drone_a7d79535260dee52d162326b08019d686}\label{classmy_drone_a7d79535260dee52d162326b08019d686} 
+const int {\bfseries compas\+Size} = 48
+\begin{DoxyCompactList}\small\item\em size of the compass image (compas\+Size x compas\+Size) \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a85e9a26ddc2be98d897c0e8e6b7b2be0}\label{classmy_drone_a85e9a26ddc2be98d897c0e8e6b7b2be0} 
+const int {\bfseries bar\+Space} = 150
+\begin{DoxyCompactList}\small\item\em minimum size of the Progress\+Bar \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a83c850e3f3adfdeaaa9e036129643477}\label{classmy_drone_a83c850e3f3adfdeaaa9e036129643477} 
+my\+Drone\+Status {\bfseries status}
+\begin{DoxyCompactList}\small\item\em status of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a5e1f8d890f180522bad3dba8abd33fb9}\label{classmy_drone_a5e1f8d890f180522bad3dba8abd33fb9} 
+double {\bfseries height}
+\begin{DoxyCompactList}\small\item\em current height of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}\label{classmy_drone_a79089092aa8a20e87dd2a52d9559267f} 
+QString {\bfseries name}
+\begin{DoxyCompactList}\small\item\em name of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a91489071f2cbeac753f2b6e09edb949f}\label{classmy_drone_a91489071f2cbeac753f2b6e09edb949f} 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em id of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}\label{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8} 
+QColor {\bfseries color}
+\begin{DoxyCompactList}\small\item\em color representing the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}\label{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5} 
+QString {\bfseries server\+Address}
+\begin{DoxyCompactList}\small\item\em server address associated with the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a2e39fea8aa4f20d81c11a678f2e24c57}\label{classmy_drone_a2e39fea8aa4f20d81c11a678f2e24c57} 
+QProgress\+Bar \texorpdfstring{$\ast$}{*} {\bfseries speed\+PB}
+\begin{DoxyCompactList}\small\item\em progress bar widget for the speed \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_ad4ce2cb0f802f5f61f9776d71854f32c}\label{classmy_drone_ad4ce2cb0f802f5f61f9776d71854f32c} 
+QProgress\+Bar \texorpdfstring{$\ast$}{*} {\bfseries power\+PB}
+\begin{DoxyCompactList}\small\item\em progress bar widget for the power \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a397b544944480dd220aa06e4abbc4f50}\label{classmy_drone_a397b544944480dd220aa06e4abbc4f50} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries position}
+\begin{DoxyCompactList}\small\item\em current position of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a779a8edc3e6c8ac33bacf39ba515f136}\label{classmy_drone_a779a8edc3e6c8ac33bacf39ba515f136} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries goal\+Position}
+\begin{DoxyCompactList}\small\item\em goal position for the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_add4d2695d3629a599a1f031924a45ae4}\label{classmy_drone_add4d2695d3629a599a1f031924a45ae4} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries go\+To\+Position}
+\item 
+\Hypertarget{classmy_drone_a273b8b93aecdc9fddd0f88aed8331e6a}\label{classmy_drone_a273b8b93aecdc9fddd0f88aed8331e6a} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries direction}
+\begin{DoxyCompactList}\small\item\em current direction \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_ac363cebb8b9a9a7fdb53e8389d96002b}\label{classmy_drone_ac363cebb8b9a9a7fdb53e8389d96002b} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries velocity}
+\begin{DoxyCompactList}\small\item\em current speed vector \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_ad17c4014363fe46542277bdb32f0d901}\label{classmy_drone_ad17c4014363fe46542277bdb32f0d901} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries force\+Collision}
+\begin{DoxyCompactList}\small\item\em force generated by the collision detection \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a50392b023e05db5db2af183b8cb17d41}\label{classmy_drone_a50392b023e05db5db2af183b8cb17d41} 
+double {\bfseries speed}
+\begin{DoxyCompactList}\small\item\em current speed \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a6db8dec16ee55486cba56b149ec4657a}\label{classmy_drone_a6db8dec16ee55486cba56b149ec4657a} 
+double {\bfseries speed\+Setpoint}
+\begin{DoxyCompactList}\small\item\em speed to reach if possible \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_af7f353fb7dd6a17aedb45835acfc1ce5}\label{classmy_drone_af7f353fb7dd6a17aedb45835acfc1ce5} 
+double {\bfseries power}
+\begin{DoxyCompactList}\small\item\em current power \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a7d48440bceb8dc99794522d2690f1a39}\label{classmy_drone_a7d48440bceb8dc99794522d2690f1a39} 
+double {\bfseries azimut}
+\begin{DoxyCompactList}\small\item\em rotation angle of the drone \end{DoxyCompactList}\item 
+\Hypertarget{classmy_drone_a65761b9229c77cf51b35eb6d588ebf8d}\label{classmy_drone_a65761b9229c77cf51b35eb6d588ebf8d} 
+bool {\bfseries show\+Collision}
+\begin{DoxyCompactList}\small\item\em true if a collision is detected \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classmy_drone}{my\+Drone} class represents a drone including movement, collision detection, route planning, and state management. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Drone related methods \end{DoxyRefDesc}
+
+
+The class supports features such as\+:
+\begin{DoxyItemize}
+\item Setting destinations using coordinates or server positions.
+\item Updating the drone\textquotesingle{}s state over time (e.\+g., position, speed).
+\item Route planning using graph structures and network graphs. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac}\index{myDrone@{myDrone}!myDrone@{myDrone}}
+\index{myDrone@{myDrone}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{myDrone()}{myDrone()}}
+{\footnotesize\ttfamily \label{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac} 
+my\+Drone\+::my\+Drone (\begin{DoxyParamCaption}\item[{const QString \&}]{name}{, }\item[{const QColor \&}]{color}{, }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{initial\+Position}{, }\item[{const QString \&}]{server\+Address}{}\end{DoxyParamCaption})}
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Drone related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmy_drone_a291b25e7ea08648ccc7abff056d21fe6}\index{myDrone@{myDrone}!addCollision@{addCollision}}
+\index{addCollision@{addCollision}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{addCollision()}{addCollision()}}
+{\footnotesize\ttfamily \label{classmy_drone_a291b25e7ea08648ccc7abff056d21fe6} 
+void my\+Drone\+::add\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{other}{, }\item[{float}]{threshold}{}\end{DoxyParamCaption})}
+
+
+
+Adds a potential collision to the drone\textquotesingle{}s collision detection system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other object involved in the collision. \\
+\hline
+{\em threshold} & The distance threshold for collision detection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a0099e08a4b3c534feaf6315db7245639}\index{myDrone@{myDrone}!getAzimut@{getAzimut}}
+\index{getAzimut@{getAzimut}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getAzimut()}{getAzimut()}}
+{\footnotesize\ttfamily \label{classmy_drone_a0099e08a4b3c534feaf6315db7245639} 
+double my\+Drone\+::get\+Azimut (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the azimuth of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The azimuth (orientation) of the drone in degrees. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a8513b51648513148fd5196f1ac0e6877}\index{myDrone@{myDrone}!getColor@{getColor}}
+\index{getColor@{getColor}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classmy_drone_a8513b51648513148fd5196f1ac0e6877} 
+QColor my\+Drone\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the color of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The color of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_aaf120ac7d83cabb7052fb70069e547df}\index{myDrone@{myDrone}!getGoalPosition@{getGoalPosition}}
+\index{getGoalPosition@{getGoalPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getGoalPosition()}{getGoalPosition()}}
+{\footnotesize\ttfamily \label{classmy_drone_aaf120ac7d83cabb7052fb70069e547df} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} my\+Drone\+::get\+Goal\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the drone\textquotesingle{}s goal position. 
+
+\begin{DoxyReturn}{Returns}
+The current goal position of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a107f83f7b18c1c85df60df1cabb77e84}\index{myDrone@{myDrone}!getGoToPosition@{getGoToPosition}}
+\index{getGoToPosition@{getGoToPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getGoToPosition()}{getGoToPosition()}}
+{\footnotesize\ttfamily \label{classmy_drone_a107f83f7b18c1c85df60df1cabb77e84} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} my\+Drone\+::get\+Go\+To\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the position the drone is heading to. 
+
+\begin{DoxyReturn}{Returns}
+The target position the drone is heading towards. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_aa7da1724fa2d83c47d98fedf82f4c83e}\index{myDrone@{myDrone}!getId@{getId}}
+\index{getId@{getId}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classmy_drone_aa7da1724fa2d83c47d98fedf82f4c83e} 
+int my\+Drone\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the ID of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The unique ID of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a3a309d6483e735575a7384f3d9109a3d}\index{myDrone@{myDrone}!getIsActive@{getIsActive}}
+\index{getIsActive@{getIsActive}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getIsActive()}{getIsActive()}}
+{\footnotesize\ttfamily \label{classmy_drone_a3a309d6483e735575a7384f3d9109a3d} 
+bool my\+Drone\+::get\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the drone is active. 
+
+\begin{DoxyReturn}{Returns}
+true if the drone is active, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a3721d34450e2eca19977188c0eaee01a}\index{myDrone@{myDrone}!getName@{getName}}
+\index{getName@{getName}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classmy_drone_a3721d34450e2eca19977188c0eaee01a} 
+QString my\+Drone\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The name of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a87a4682c80a00290fbd341a98e2ebba8}\index{myDrone@{myDrone}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{classmy_drone_a87a4682c80a00290fbd341a98e2ebba8} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} my\+Drone\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the drone\textquotesingle{}s current position. 
+
+\begin{DoxyReturn}{Returns}
+The current position of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a3ac5e56e284ecd8dccfde5ced690a360}\index{myDrone@{myDrone}!getPower@{getPower}}
+\index{getPower@{getPower}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getPower()}{getPower()}}
+{\footnotesize\ttfamily \label{classmy_drone_a3ac5e56e284ecd8dccfde5ced690a360} 
+double my\+Drone\+::get\+Power (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current power level of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The current power level of the drone (in units of power). 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_a0cded5d0516a45fba42686fbdf3ab5b6}\index{myDrone@{myDrone}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \label{classmy_drone_a0cded5d0516a45fba42686fbdf3ab5b6} 
+my\+Drone\+Status my\+Drone\+::get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current status of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The current status of the drone. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_af70dbb202b21637dc4cd448cd8032e1c}\index{myDrone@{myDrone}!hasCollision@{hasCollision}}
+\index{hasCollision@{hasCollision}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{hasCollision()}{hasCollision()}}
+{\footnotesize\ttfamily \label{classmy_drone_af70dbb202b21637dc4cd448cd8032e1c} 
+bool my\+Drone\+::has\+Collision (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the drone has a collision. 
+
+\begin{DoxyReturn}{Returns}
+True if the drone has a collision, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classmy_drone_afdf76fda1789e17abd885c47d10359d9}\index{myDrone@{myDrone}!setGoalPosition@{setGoalPosition}}
+\index{setGoalPosition@{setGoalPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setGoalPosition()}{setGoalPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmy_drone_afdf76fda1789e17abd885c47d10359d9} 
+void my\+Drone\+::set\+Goal\+Position (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{server\+List}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s goal position based on a list of servers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+List} & A list of servers to set as the goal position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_abf4b24ad01960a75230abd9709aa56a2}\index{myDrone@{myDrone}!setGoalPosition@{setGoalPosition}}
+\index{setGoalPosition@{setGoalPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setGoalPosition()}{setGoalPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmy_drone_abf4b24ad01960a75230abd9709aa56a2} 
+void my\+Drone\+::set\+Goal\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s goal position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The goal position to set for the drone. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a33103a690676633b4365c8f96f0064f5}\index{myDrone@{myDrone}!setGoToPosition@{setGoToPosition}}
+\index{setGoToPosition@{setGoToPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setGoToPosition()}{setGoToPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classmy_drone_a33103a690676633b4365c8f96f0064f5} 
+void my\+Drone\+::set\+Go\+To\+Position (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{server\+List}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s destination based on a list of servers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+List} & A list of servers to navigate towards. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_afb5d7638cc28fe7b19b444d105675dea}\index{myDrone@{myDrone}!setGoToPosition@{setGoToPosition}}
+\index{setGoToPosition@{setGoToPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setGoToPosition()}{setGoToPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classmy_drone_afb5d7638cc28fe7b19b444d105675dea} 
+void my\+Drone\+::set\+Go\+To\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{server}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s destination to a specific server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The server to set as the drone\textquotesingle{}s destination. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a55ffd65fd07cfe6314c4dcb0d31ff404}\index{myDrone@{myDrone}!setGoToPosition@{setGoToPosition}}
+\index{setGoToPosition@{setGoToPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setGoToPosition()}{setGoToPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classmy_drone_a55ffd65fd07cfe6314c4dcb0d31ff404} 
+void my\+Drone\+::set\+Go\+To\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{server}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s destination to a specific server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The server to set as the drone\textquotesingle{}s destination. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a32ea0636ae4256bdfe10897d461a6f1c}\index{myDrone@{myDrone}!setInitialPosition@{setInitialPosition}}
+\index{setInitialPosition@{setInitialPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setInitialPosition()}{setInitialPosition()}}
+{\footnotesize\ttfamily \label{classmy_drone_a32ea0636ae4256bdfe10897d461a6f1c} 
+void my\+Drone\+::set\+Initial\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Sets the initial position of the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to set for the drone. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_ae2a820b040457ba25441b5b73d40d2c1}\index{myDrone@{myDrone}!setIsActive@{setIsActive}}
+\index{setIsActive@{setIsActive}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setIsActive()}{setIsActive()}}
+{\footnotesize\ttfamily \label{classmy_drone_ae2a820b040457ba25441b5b73d40d2c1} 
+void my\+Drone\+::set\+Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{active}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the drone\textquotesingle{}s active status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & The status to set (true for active, false for inactive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a785ac09d7fbdb544ae7630afd3b5a6d6}\index{myDrone@{myDrone}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmy_drone_a785ac09d7fbdb544ae7630afd3b5a6d6} 
+void my\+Drone\+::set\+Position (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s position based on x and y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate to set for the drone\textquotesingle{}s position. \\
+\hline
+{\em y} & The y-\/coordinate to set for the drone\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_ae94af7580b88fef4adad471190f48f0f}\index{myDrone@{myDrone}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmy_drone_ae94af7580b88fef4adad471190f48f0f} 
+void my\+Drone\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{server}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s position to a specific server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The server to set as the drone\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_afe65be1facefbf2540e100583732ed15}\index{myDrone@{myDrone}!setRoute@{setRoute}}
+\index{setRoute@{setRoute}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setRoute()}{setRoute()}}
+{\footnotesize\ttfamily \label{classmy_drone_afe65be1facefbf2540e100583732ed15} 
+void my\+Drone\+::set\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{network\+Graph}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{start\+Node}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{end\+Node}{, }\item[{\mbox{\hyperlink{classserver}{server}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Sets the route for the drone using graph pointers and specified start and end nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The main graph used to calculate the route. \\
+\hline
+{\em network\+Graph} & The network graph used for route computation. \\
+\hline
+{\em start\+Node} & The starting node of the route. \\
+\hline
+{\em end\+Node} & The destination node of the route. \\
+\hline
+{\em s} & The server that the drone will interact with. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_adee6be6344d32e11a73c7a82cb58e02c}\index{myDrone@{myDrone}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily \label{classmy_drone_adee6be6344d32e11a73c7a82cb58e02c} 
+void my\+Drone\+::set\+Speed (\begin{DoxyParamCaption}\item[{double}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+Sets the drone\textquotesingle{}s speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The speed to set for the drone. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a66157786bc935020fb93a8a861312328}\index{myDrone@{myDrone}!update@{update}}
+\index{update@{update}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classmy_drone_a66157786bc935020fb93a8a861312328} 
+void my\+Drone\+::update (\begin{DoxyParamCaption}\item[{double}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the drone\textquotesingle{}s state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step used to update the drone\textquotesingle{}s state. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmy_drone_a9ceb049d99f5dc7dc4ca904252d723bf}\index{myDrone@{myDrone}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!myDrone@{myDrone}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily \label{classmy_drone_a9ceb049d99f5dc7dc4ca904252d723bf} 
+void my\+Drone\+::update\+Position (\begin{DoxyParamCaption}\item[{double}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the position of the drone based on the time step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step used to update the drone\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/drone.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/drone.\+cpp\end{DoxyCompactItemize}

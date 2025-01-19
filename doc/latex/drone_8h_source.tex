@@ -1,0 +1,134 @@
+\doxysection{drone.\+h}
+\hypertarget{drone_8h_source}{}\label{drone_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/drone.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/drone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DRONE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DRONE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}vector2d.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QImage>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QColor>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}server.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac}{myDrone}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_aacf7483c48ab9b99e63c6be5917eab3e}{maxSpeed}}\ =\ 50;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a799b4f381c71df27abcaa10cd3897276}{maxPower}}\ =\ 200;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a8566368621b0f4b0862eb8778c280e8d}{takeoffSpeed}}\ =\ 2.5;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a46185411dfbb67e9e14b06e6ba515024}{hoveringHeight}}\ =\ 5;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a113565f81df6f54ed92ddc6fda8a2ffc}{coefCollision}}\ =\ 1000;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_ae4adfa7d5bfe57246abec186ddfd871a}{damping}}\ =\ 0.2;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a24d340b3b048be7a6ec616b21e615edd}{chargingSpeed}}\ =\ 10;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a7e5a88588c7515265e1a7cf6a738ec7f}{powerConsumption}}\ =\ 5;\ }
+\DoxyCodeLine{00037\ \ \ \ \ QList<Node*>\ \mbox{\hyperlink{classmy_drone_abbea6b8d34cc116c0fd156c6074aeec3}{route}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmy_drone_ae58db1a654b9490375e5b211daf0e270}{routeInitialized}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmy_drone_a2b8bbcc8a1bbb10ae56e3ae560e24704}{currentNodeIndex}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmy_drone_aa527fc6642029a54c05a2c7f89264199}{isActive}}\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{enum}\ myDroneStatus\ \{\ landed,\ takeoff,\ landing,\ hovering,\ turning,\ flying\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac}{myDrone}}(\textcolor{keyword}{const}\ QString\ \&\mbox{\hyperlink{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}{name}},\ \textcolor{keyword}{const}\ QColor\ \&\mbox{\hyperlink{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}{color}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \&initialPosition,\ \textcolor{keyword}{const}\ QString\ \&\mbox{\hyperlink{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}{serverAddress}});}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classmy_drone_a8171355dc4b49d1b0aded92ff17409ac}{myDrone}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ QString\ \&\mbox{\hyperlink{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}{name}},\ \textcolor{keyword}{const}\ QColor\ \&\mbox{\hyperlink{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}{color}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \&initialPosition,\ \textcolor{keyword}{const}\ QString\ \&\mbox{\hyperlink{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}{serverAddress}});}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classmy_drone}{\string~myDrone}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a5537d516c0a873688eb7b63c76e5e695}{start}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a68fd126455c1031c9a203388b67e15f0}{stop}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_adee6be6344d32e11a73c7a82cb58e02c}{setSpeed}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a50392b023e05db5db2af183b8cb17d41}{speed}});}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a32ea0636ae4256bdfe10897d461a6f1c}{setInitialPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \&\mbox{\hyperlink{classmy_drone_a397b544944480dd220aa06e4abbc4f50}{position}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a33103a690676633b4365c8f96f0064f5}{setGoToPosition}}(\textcolor{keyword}{const}\ QVector<Vector2D>\&\ serverList);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a55ffd65fd07cfe6314c4dcb0d31ff404}{setGoToPosition}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\&\ \mbox{\hyperlink{classserver}{server}});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a33103a690676633b4365c8f96f0064f5}{setGoToPosition}}(\mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{classserver}{server}});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_abf4b24ad01960a75230abd9709aa56a2}{setGoalPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \&\mbox{\hyperlink{classmy_drone_a397b544944480dd220aa06e4abbc4f50}{position}});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_abf4b24ad01960a75230abd9709aa56a2}{setGoalPosition}}(\textcolor{keyword}{const}\ QVector<Vector2D>\&\ serverList);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_ae94af7580b88fef4adad471190f48f0f}{setPosition}}(\mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{classserver}{server}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_ae94af7580b88fef4adad471190f48f0f}{setPosition}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_aaf120ac7d83cabb7052fb70069e547df}{getGoalPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_a87a4682c80a00290fbd341a98e2ebba8}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_a107f83f7b18c1c85df60df1cabb77e84}{getGoToPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ myDroneStatus\ \mbox{\hyperlink{classmy_drone_a0cded5d0516a45fba42686fbdf3ab5b6}{getStatus}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmy_drone_a83c850e3f3adfdeaaa9e036129643477}{status}};\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmy_drone_a3a309d6483e735575a7384f3d9109a3d}{getIsActive}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmy_drone_aa527fc6642029a54c05a2c7f89264199}{isActive}};\ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_ae2a820b040457ba25441b5b73d40d2c1}{setIsActive}}(\textcolor{keywordtype}{bool}\ active)\ \{\ \mbox{\hyperlink{classmy_drone_aa527fc6642029a54c05a2c7f89264199}{isActive}}\ =\ active;\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ QString\ \mbox{\hyperlink{classmy_drone_a3721d34450e2eca19977188c0eaee01a}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmy_drone_aa7da1724fa2d83c47d98fedf82f4c83e}{getId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a0099e08a4b3c534feaf6315db7245639}{getAzimut}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a3ac5e56e284ecd8dccfde5ced690a360}{getPower}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ QColor\ \mbox{\hyperlink{classmy_drone_a8513b51648513148fd5196f1ac0e6877}{getColor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a66157786bc935020fb93a8a861312328}{update}}(\textcolor{keywordtype}{double}\ dt);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a22df5b578889005a2598d491b6617ce4}{initCollision}}();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a291b25e7ea08648ccc7abff056d21fe6}{addCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \&other,\ \textcolor{keywordtype}{float}\ threshold);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmy_drone_af70dbb202b21637dc4cd448cd8032e1c}{hasCollision}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_a9ceb049d99f5dc7dc4ca904252d723bf}{updatePosition}}(\textcolor{keywordtype}{double}\ dt);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmy_drone_afe65be1facefbf2540e100583732ed15}{setRoute}}(\mbox{\hyperlink{class_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{class_graph}{Graph}}*\ networkGraph,\ \mbox{\hyperlink{class_node}{Node}}*\ startNode,\ \mbox{\hyperlink{class_node}{Node}}*\ endNode,\ \mbox{\hyperlink{classserver}{server}}*\ s);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmy_drone_a7d79535260dee52d162326b08019d686}{compasSize}}\ =\ 48;\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmy_drone_a85e9a26ddc2be98d897c0e8e6b7b2be0}{barSpace}}\ =\ 150;\ }
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ myDroneStatus\ \mbox{\hyperlink{classmy_drone_a83c850e3f3adfdeaaa9e036129643477}{status}};\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a5e1f8d890f180522bad3dba8abd33fb9}{height}};\ }
+\DoxyCodeLine{00232\ \ \ \ \ QString\ \mbox{\hyperlink{classmy_drone_a79089092aa8a20e87dd2a52d9559267f}{name}};\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmy_drone_a91489071f2cbeac753f2b6e09edb949f}{id}};\ }
+\DoxyCodeLine{00234\ \ \ \ \ QColor\ \mbox{\hyperlink{classmy_drone_a6ee5c5b591613309c02152ffa7eb72f8}{color}};\ }
+\DoxyCodeLine{00235\ \ \ \ \ QString\ \mbox{\hyperlink{classmy_drone_a7f703b73e24fa1b442ef34594b24f1b5}{serverAddress}};\ }
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ QProgressBar\ *\mbox{\hyperlink{classmy_drone_a2e39fea8aa4f20d81c11a678f2e24c57}{speedPB}};\ }
+\DoxyCodeLine{00238\ \ \ \ \ QProgressBar\ *\mbox{\hyperlink{classmy_drone_ad4ce2cb0f802f5f61f9776d71854f32c}{powerPB}};\ }
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_a397b544944480dd220aa06e4abbc4f50}{position}};\ }
+\DoxyCodeLine{00241\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_a779a8edc3e6c8ac33bacf39ba515f136}{goalPosition}};\ }
+\DoxyCodeLine{00242\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ goToPosition;}
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_a273b8b93aecdc9fddd0f88aed8331e6a}{direction}};\ }
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_ac363cebb8b9a9a7fdb53e8389d96002b}{velocity}};\ }
+\DoxyCodeLine{00245\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{classmy_drone_ad17c4014363fe46542277bdb32f0d901}{forceCollision}};\ }
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a50392b023e05db5db2af183b8cb17d41}{speed}};\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a6db8dec16ee55486cba56b149ec4657a}{speedSetpoint}};\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_af7f353fb7dd6a17aedb45835acfc1ce5}{power}};\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmy_drone_a7d48440bceb8dc99794522d2690f1a39}{azimut}};\ }
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmy_drone_a65761b9229c77cf51b35eb6d588ebf8d}{showCollision}};\ }
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{comment}{//QImage\ compassImg,\ stopImg,\ takeoffImg,\ landingImg;}}
+\DoxyCodeLine{00255\ \};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DRONE\_H}}
+
+\end{DoxyCode}

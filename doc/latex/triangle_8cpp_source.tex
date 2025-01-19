@@ -1,0 +1,137 @@
+\doxysection{triangle.\+cpp}
+\hypertarget{triangle_8cpp_source}{}\label{triangle_8cpp_source}\index{C:/Users/MITEL Yohann/Desktop/QT/QtCircumcircle/triangle.cpp@{C:/Users/MITEL Yohann/Desktop/QT/QtCircumcircle/triangle.cpp}}
+\mbox{\hyperlink{triangle_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{triangle_8h}{triangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00004}\mbox{\hyperlink{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d}{Triangle::computeCircle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00005}00005\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ AB\ =\ *\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[1]-\/*\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[0];}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ AC\ =\ *\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[2]-\/*\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[0];}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//OBprim=\ OA+0.5\ AC}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ OBprim\ =\ *\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[0]\ +\ 0.5*AC;}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ VAC\ =\ AC.\mbox{\hyperlink{class_vector2_d_ade14049e72c6167b1547bdccb61ad477}{orthoNormed}}();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{double}\ k\ =\ (AB*AB\ -\/\ AC*AB)/(2*(VAC*AB));}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_triangle_a81b54984cefb55231f55bdfeac41a545}{circumCenter}}\ =\ OBprim\ +\ k\ *\ VAC;}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}{circumRadius}}\ =\ (\mbox{\hyperlink{class_triangle_a81b54984cefb55231f55bdfeac41a545}{circumCenter}}-\/\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[0]).length();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00017}\mbox{\hyperlink{class_triangle_a2ee48003aaf0a326c3866c7e2d61a261}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_triangle_a2ee48003aaf0a326c3866c7e2d61a261}{Triangle::draw}}(QPainter\ \&painter)\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00018}00018\ \ \ \ \ QPen\ pen(Qt::black);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00019}00019\ \ \ \ \ pen.setWidth(3);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00020}00020\ \ \ \ \ painter.setPen(pen);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00021}00021\ \ \ \ \ QColor\ c=\ \mbox{\hyperlink{class_triangle_ab6fd305c3b7114988efe91366cfdc58d}{isDelaunay}}?Qt::cyan:(\mbox{\hyperlink{class_triangle_a32e1f2280671b7a4ceaf13da637d0d6e}{flippable}}?Qt::gray:Qt::yellow);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//painter.setBrush(isHighlited?(isDelaunay?Qt::green:Qt::red):Qt::yellow);}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_triangle_a994f6a50a894f5a919ea4b5cda7c109f}{isHighlighted}}())\{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h,s,l;}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ c.getHslF(\&h,\&s,\&l);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ c.setHslF(h,s,l*0.75);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00030}00030\ \ \ \ \ painter.setBrush(c);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00031}00031\ \ \ \ \ QPointF\ points[3];}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<3;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ points[i].setX(\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[i]-\/>x);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ points[i].setY(\mbox{\hyperlink{class_triangle_a06b229840845b947f4f9ded3585bea3b}{ptr}}[i]-\/>y);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00036}00036\ \ \ \ \ painter.drawPolygon(points,3);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00039}\mbox{\hyperlink{class_triangle_afa7613cc5c6e20df91f408166bd1aa61}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_triangle_afa7613cc5c6e20df91f408166bd1aa61}{Triangle::drawCircle}}(QPainter\ \&painter)\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00040}00040\ \ \ \ \ painter.setPen(QPen(Qt::black,3,Qt::DashLine));}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00041}00041\ \ \ \ \ painter.setBrush(Qt::NoBrush);}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00042}00042\ \ \ \ \ painter.drawEllipse(\mbox{\hyperlink{class_triangle_a81b54984cefb55231f55bdfeac41a545}{circumCenter}}.\mbox{\hyperlink{class_vector2_d_aeb4253ba6555251d010ea4450619029e}{x}}-\/\mbox{\hyperlink{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}{circumRadius}},\mbox{\hyperlink{class_triangle_a81b54984cefb55231f55bdfeac41a545}{circumCenter}}.\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}-\/\mbox{\hyperlink{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}{circumRadius}},2.0*\mbox{\hyperlink{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}{circumRadius}},2.0*\mbox{\hyperlink{class_triangle_ab4b09de31bf414d3045d8b5a42fb9203}{circumRadius}});}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00049}\mbox{\hyperlink{class_triangle_a8b8384238eeee2464c6952a7c534f60f}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_triangle_a8b8384238eeee2464c6952a7c534f60f}{Triangle::flippIt}}(QVector<Triangle*>\ triangles)\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00050}00050\ \ \ \ \ QVector<const\ Vector2D*>\ commonEdges;}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00052}00052\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}OPPOSITE\ :\ "{}}\ <<\ *(this-\/>\mbox{\hyperlink{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}{getOpposite}}());}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Iterate\ over\ all\ neighboring\ triangles}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ tri\ :\ triangles)\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \ tri-\/>isFlippable()\ \&\&\ tri\ !=\ \textcolor{keyword}{this}\ \ \&\&\ tri-\/>contains(this-\/>getOpposite()))\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ of\ the\ 3\ edges\ to\ find\ a\ common\ edge\ with\ the\ adjacent\ triangle}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tri-\/>hasEdge(this-\/>getVertexPtr(1),\ this-\/>getVertexPtr(0)))\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Common\ edge\ is\ (1,\ 0)\ in\ the\ current\ triangle,\ and\ the\ third\ vertex\ is\ (2)}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commonEdges\ =\ \{\mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(1),\ \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(0)\};}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flip\ both\ triangles\ by\ updating\ their\ vertices}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_a4294661184d49e6bd3e29f023f2d58e1}{updateVertices}}(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}{getOpposite}}(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[0]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>updateVertices(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[1]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>computeCircle();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exit\ loop\ after\ flipping\ both\ triangles}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{//\ No\ need\ to\ keep\ searching,\ the\ flip\ is\ complete}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (tri-\/>hasEdge(\mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(2),\ \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(1)))\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Common\ edge\ is\ (2,\ 1)\ in\ the\ current\ triangle,\ and\ the\ third\ vertex\ is\ (0)}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commonEdges\ =\ \{\mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(2),\ \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(1)\};}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flip\ both\ triangles\ by\ updating\ their\ vertices}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_a4294661184d49e6bd3e29f023f2d58e1}{updateVertices}}(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}{getOpposite}}(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[0]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>updateVertices(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[1]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>computeCircle();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exit\ loop\ after\ flipping\ both\ triangles}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{//\ No\ need\ to\ keep\ searching,\ the\ flip\ is\ complete}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (tri-\/>hasEdge(\mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(0),\ \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(2)))\ \{}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Common\ edge\ is\ (0,\ 2)\ in\ the\ current\ triangle,\ and\ the\ third\ vertex\ is\ (1)}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ commonEdges\ =\ \{\mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(0),\ \mbox{\hyperlink{class_triangle_acb129650e51a79a3af1de56673304320}{getVertexPtr}}(2)\};}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flip\ both\ triangles\ by\ updating\ their\ vertices}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_a4294661184d49e6bd3e29f023f2d58e1}{updateVertices}}(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_ac6a3d7227338d8abdacd9822ba5c3d49}{getOpposite}}(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[0]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>updateVertices(}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>getOpposite(),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const\_cast<}\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\textcolor{keyword}{>}(commonEdges[1]),}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>getOpposite()}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tri-\/>computeCircle();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exit\ loop\ after\ flipping\ both\ triangles}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ No\ need\ to\ keep\ searching,\ the\ flip\ is\ complete}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00127}00127\ \ \ \ \ this-\/>\mbox{\hyperlink{class_triangle_abc1d2380e0daf2b13ef96e3e89f01a2d}{computeCircle}}();}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00130}00130\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}FlippIt\ ended"{}};}
+\DoxyCodeLine{\Hypertarget{triangle_8cpp_source_l00131}00131\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,340 @@
+\doxysection{My\+Polygon Class Reference}
+\hypertarget{class_my_polygon}{}\label{class_my_polygon}\index{MyPolygon@{MyPolygon}}
+
+
+\doxylink{class_my_polygon}{My\+Polygon} class allow to create, draw and manipulate polygons, especially check if a point is inside and compute the surface of the polygon.  
+
+
+
+
+{\ttfamily \#include $<$my\+Polygon.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_polygon_aafdb38fa69d419e22b24db985b73ca9c}{My\+Polygon}} (int p\+\_\+\+Nmax)
+\begin{DoxyCompactList}\small\item\em Constructor of a polygon. \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a94e1a0a9e8468dbf12073b5d12448106}\label{class_my_polygon_a94e1a0a9e8468dbf12073b5d12448106} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+My\+Polygon} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_polygon_a53e2d8e36d91919c1f1bda17b76c9a1d}{get\+Vertex\+Ptr}} (int i) const
+\begin{DoxyCompactList}\small\item\em Add a new vertex at the end of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_polygon_a1d6a063335b5d2fb142e81408ecd3a2a}{get\+Vertex}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the vertex of the object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_my_polygon_a512bc6f335730d69420212692d8576d2}{get\+Vertex\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the vertex array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_polygon_a855da59df5a1b049e5011b890b48227d}{add\+Vertex}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Add a point in the polygon. \end{DoxyCompactList}\item 
+QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \mbox{\hyperlink{class_my_polygon_ae2adb6a5f9cdb5bb6a979bfc94d6d39b}{get\+Bounding\+Box}} () const
+\begin{DoxyCompactList}\small\item\em return the boundig box coordinates of the polygon \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a29e325746b0e644ceee3d612ad8e4cdd}\label{class_my_polygon_a29e325746b0e644ceee3d612ad8e4cdd} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Center} ()
+\begin{DoxyCompactList}\small\item\em Return the center point of the polygon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_my_polygon_a42ef482a4c8b9e5d86378037da96a2e8}{calculate\+Centroid}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the centroid of the polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_polygon_a8278555c2df2a71deb1ab38fe5a589b8}{set\+Color}} (const QColor c)
+\begin{DoxyCompactList}\small\item\em Set the color of the polygon to c. \end{DoxyCompactList}\item 
+QColor \mbox{\hyperlink{class_my_polygon_a01557774ee9d2126f7fc1a05ed1d8e4f}{get\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Get the color of the polygon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_my_polygon_af89b87aa476b9b61e705ac55eed5ad48}{has\+Edge}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} A, \mbox{\hyperlink{class_vector2_d}{Vector2D}} B) const
+\begin{DoxyCompactList}\small\item\em Checks if an edge exists between two points A and B in the polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_polygon_a553e9ef3be4449891d8f2d7e97917011}{draw}} (QPainter \&painter, bool show\+Triangles)
+\begin{DoxyCompactList}\small\item\em Draw the polygon. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_polygon_a2f9182caf4d6199aa4268e05f74bcb2c}{get\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertices of the polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_polygon_aef93d1d477137ad49505680ed1f34bfc}{get\+Shared\+Sides}} (QVector$<$ \mbox{\hyperlink{class_my_polygon}{My\+Polygon}} \texorpdfstring{$\ast$}{*} $>$ polygons)
+\begin{DoxyCompactList}\small\item\em Retrieves shared sides with other polygons. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_my_polygon_aea68d0ddcb1d8b517bbe03d6a639ef02}{is\+Point\+Inside}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}point)
+\begin{DoxyCompactList}\small\item\em Checks if a point is inside the polygon. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_my_polygon_ac34fb006854b02cd49a1fd024dfac478}{get\+Server\+List}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of server positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_polygon_ab0da614fe94c9b687a68cd4ab1e3c182}\label{class_my_polygon_ab0da614fe94c9b687a68cd4ab1e3c182} 
+bool {\bfseries is\+Open} = false
+\begin{DoxyCompactList}\small\item\em Indicates whether the triangle is open or closed. Defaults to false (closed). \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a1a3f4df029b0aec64c97d455909f6b65}\label{class_my_polygon_a1a3f4df029b0aec64c97d455909f6b65} 
+QMap$<$ \mbox{\hyperlink{class_my_polygon}{My\+Polygon}} \texorpdfstring{$\ast$}{*}, QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ $>$ {\bfseries shared\+Sides}
+\begin{DoxyCompactList}\small\item\em Shared sides between polygons key = pointer to the polygon and value= pair of \doxylink{class_vector2_d}{Vector2D} representing the two points of the shared side. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_polygon_af45e7882b36f0b9702d45b1757f920e0}\label{class_my_polygon_af45e7882b36f0b9702d45b1757f920e0} 
+int {\bfseries Nmax}
+\begin{DoxyCompactList}\small\item\em maximum number of vertices for the current Polygon \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a45661c328421c76477145ec42d46ca5d}\label{class_my_polygon_a45661c328421c76477145ec42d46ca5d} 
+int {\bfseries N}
+\begin{DoxyCompactList}\small\item\em current number of vertices \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c}\label{class_my_polygon_a1a7d37fab752a1672ba3ae9b683c7f1c} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} {\bfseries tab\+Pts}
+\begin{DoxyCompactList}\small\item\em array of vertex positions \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a2211051569fcfc71715284076980a832}\label{class_my_polygon_a2211051569fcfc71715284076980a832} 
+QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} $>$ {\bfseries triangles}
+\begin{DoxyCompactList}\small\item\em array of triangles for the triangulation process \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe}\label{class_my_polygon_ab153cb2f23f6cb09aeb8cbcc4e8218fe} 
+QColor {\bfseries current\+Color}
+\begin{DoxyCompactList}\small\item\em current drawing color of the polygon \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_ab2173c4b2b43c71100b43c9d33fb5035}\label{class_my_polygon_ab2173c4b2b43c71100b43c9d33fb5035} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries center} = \mbox{\hyperlink{class_vector2_d}{Vector2D}}(0,0)
+\begin{DoxyCompactList}\small\item\em center of the polygon \end{DoxyCompactList}\item 
+\Hypertarget{class_my_polygon_a9dc00e18b374ef7cd7e0fb0603a81b7d}\label{class_my_polygon_a9dc00e18b374ef7cd7e0fb0603a81b7d} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries server\+List}
+\begin{DoxyCompactList}\small\item\em list of servers in the polygon \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_my_polygon}{My\+Polygon} class allow to create, draw and manipulate polygons, especially check if a point is inside and compute the surface of the polygon. 
+
+\begin{DoxyAuthor}{Author}
+Benoît Piranda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]Make more tests of the triangulation algorithm with complex shapes. \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_polygon_aafdb38fa69d419e22b24db985b73ca9c}\index{MyPolygon@{MyPolygon}!MyPolygon@{MyPolygon}}
+\index{MyPolygon@{MyPolygon}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{MyPolygon()}{MyPolygon()}}
+{\footnotesize\ttfamily \label{class_my_polygon_aafdb38fa69d419e22b24db985b73ca9c} 
+My\+Polygon\+::\+My\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+\+Nmax}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of a polygon. 
+
+\begin{DoxyWarning}{Warning}
+The number of vertices added to the polygon must be lower than p\+\_\+\+Nmax. The program will crash otherwise. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+\+Nmax} & maximum number of vertices. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_polygon_a855da59df5a1b049e5011b890b48227d}\index{MyPolygon@{MyPolygon}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a855da59df5a1b049e5011b890b48227d} 
+void My\+Polygon\+::add\+Vertex (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Add a point in the polygon. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Polygon related methods \end{DoxyRefDesc}
+\Hypertarget{class_my_polygon_a42ef482a4c8b9e5d86378037da96a2e8}\index{MyPolygon@{MyPolygon}!calculateCentroid@{calculateCentroid}}
+\index{calculateCentroid@{calculateCentroid}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{calculateCentroid()}{calculateCentroid()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a42ef482a4c8b9e5d86378037da96a2e8} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} My\+Polygon\+::calculate\+Centroid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the centroid of the polygon. 
+
+\begin{DoxyReturn}{Returns}
+The centroid as a \doxylink{class_vector2_d}{Vector2D}. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_a553e9ef3be4449891d8f2d7e97917011}\index{MyPolygon@{MyPolygon}!draw@{draw}}
+\index{draw@{draw}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a553e9ef3be4449891d8f2d7e97917011} 
+void My\+Polygon\+::draw (\begin{DoxyParamCaption}\item[{QPainter \&}]{painter}{, }\item[{bool}]{show\+Triangles}{}\end{DoxyParamCaption})}
+
+
+
+Draw the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Current painter context. \\
+\hline
+{\em show\+Triangles} & Shows the internal triangle if true. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_polygon_ae2adb6a5f9cdb5bb6a979bfc94d6d39b}\index{MyPolygon@{MyPolygon}!getBoundingBox@{getBoundingBox}}
+\index{getBoundingBox@{getBoundingBox}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getBoundingBox()}{getBoundingBox()}}
+{\footnotesize\ttfamily \label{class_my_polygon_ae2adb6a5f9cdb5bb6a979bfc94d6d39b} 
+QPair$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ My\+Polygon\+::get\+Bounding\+Box (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+return the boundig box coordinates of the polygon 
+
+\begin{DoxyReturn}{Returns}
+The first vector is the left bottom corner and the second vector is the right top corner of the box. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_a01557774ee9d2126f7fc1a05ed1d8e4f}\index{MyPolygon@{MyPolygon}!getColor@{getColor}}
+\index{getColor@{getColor}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a01557774ee9d2126f7fc1a05ed1d8e4f} 
+QColor My\+Polygon\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the color of the polygon. 
+
+\begin{DoxyReturn}{Returns}
+The color of the polygon 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_ac34fb006854b02cd49a1fd024dfac478}\index{MyPolygon@{MyPolygon}!getServerList@{getServerList}}
+\index{getServerList@{getServerList}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getServerList()}{getServerList()}}
+{\footnotesize\ttfamily \label{class_my_polygon_ac34fb006854b02cd49a1fd024dfac478} 
+QVector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} $>$ My\+Polygon\+::get\+Server\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of server positions. 
+
+\begin{DoxyReturn}{Returns}
+A vector of pointers to the server positions. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_aef93d1d477137ad49505680ed1f34bfc}\index{MyPolygon@{MyPolygon}!getSharedSides@{getSharedSides}}
+\index{getSharedSides@{getSharedSides}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getSharedSides()}{getSharedSides()}}
+{\footnotesize\ttfamily \label{class_my_polygon_aef93d1d477137ad49505680ed1f34bfc} 
+void My\+Polygon\+::get\+Shared\+Sides (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_my_polygon}{My\+Polygon}} \texorpdfstring{$\ast$}{*} $>$}]{polygons}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves shared sides with other polygons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em polygons} & A list of polygons to check for shared sides. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_polygon_a1d6a063335b5d2fb142e81408ecd3a2a}\index{MyPolygon@{MyPolygon}!getVertex@{getVertex}}
+\index{getVertex@{getVertex}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getVertex()}{getVertex()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a1d6a063335b5d2fb142e81408ecd3a2a} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} My\+Polygon\+::get\+Vertex (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the vertex of the object. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the array of vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_a53e2d8e36d91919c1f1bda17b76c9a1d}\index{MyPolygon@{MyPolygon}!getVertexPtr@{getVertexPtr}}
+\index{getVertexPtr@{getVertexPtr}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getVertexPtr()}{getVertexPtr()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a53e2d8e36d91919c1f1bda17b76c9a1d} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} My\+Polygon\+::get\+Vertex\+Ptr (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new vertex at the end of the list. 
+
+\begin{DoxyWarning}{Warning}
+The number of vertices added to the polygon must be lower than Nmax. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & abscissa of the new vertex \\
+\hline
+{\em y} & ordinate of the new vertex \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_polygon_a512bc6f335730d69420212692d8576d2}\index{MyPolygon@{MyPolygon}!getVertexSize@{getVertexSize}}
+\index{getVertexSize@{getVertexSize}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getVertexSize()}{getVertexSize()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a512bc6f335730d69420212692d8576d2} 
+int My\+Polygon\+::get\+Vertex\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the size of the vertex array. 
+
+\begin{DoxyReturn}{Returns}
+The number of vertices (size of the array). 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_a2f9182caf4d6199aa4268e05f74bcb2c}\index{MyPolygon@{MyPolygon}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a2f9182caf4d6199aa4268e05f74bcb2c} 
+const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} My\+Polygon\+::get\+Vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vertices of the polygon. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the array of vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_af89b87aa476b9b61e705ac55eed5ad48}\index{MyPolygon@{MyPolygon}!hasEdge@{hasEdge}}
+\index{hasEdge@{hasEdge}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{hasEdge()}{hasEdge()}}
+{\footnotesize\ttfamily \label{class_my_polygon_af89b87aa476b9b61e705ac55eed5ad48} 
+bool My\+Polygon\+::has\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{A}{, }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{B}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if an edge exists between two points A and B in the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The first point of the edge. \\
+\hline
+{\em B} & The second point of the edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the edge exists, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_aea68d0ddcb1d8b517bbe03d6a639ef02}\index{MyPolygon@{MyPolygon}!isPointInside@{isPointInside}}
+\index{isPointInside@{isPointInside}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{isPointInside()}{isPointInside()}}
+{\footnotesize\ttfamily \label{class_my_polygon_aea68d0ddcb1d8b517bbe03d6a639ef02} 
+bool My\+Polygon\+::is\+Point\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{point}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a point is inside the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & A pointer to the point to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside the polygon, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_my_polygon_a8278555c2df2a71deb1ab38fe5a589b8}\index{MyPolygon@{MyPolygon}!setColor@{setColor}}
+\index{setColor@{setColor}!MyPolygon@{MyPolygon}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_my_polygon_a8278555c2df2a71deb1ab38fe5a589b8} 
+void My\+Polygon\+::set\+Color (\begin{DoxyParamCaption}\item[{const QColor}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color of the polygon to c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The new color. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/my\+Polygon.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/mypolygon.\+cpp\end{DoxyCompactItemize}

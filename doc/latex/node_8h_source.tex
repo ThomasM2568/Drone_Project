@@ -1,0 +1,44 @@
+\doxysection{node.\+h}
+\hypertarget{node_8h_source}{}\label{node_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/node.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NODE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NODE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}vector2d.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node_a2791559360966137a418c4506b087aa7}{Node}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_node_a2791559360966137a418c4506b087aa7}{Node}}(\textcolor{keyword}{const}\ QString\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a3a6b88b82c51d21305656d01e3c53039}{x}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a0658e9aa67d95daa5da3cca23b13f6de}{y}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ QString\ \mbox{\hyperlink{class_node_a08b32af80d37050e81ba41b6aae7b1c7}{getId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a72e703ec3f48fe8bf49b2fb9a800d21e}{addEdge}}(\mbox{\hyperlink{class_node_a2791559360966137a418c4506b087aa7}{Node}}*\ neighbor);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ QList<Node*>\&\ \mbox{\hyperlink{class_node_adf561aec4ae0c4c9a411a7c3b24adeef}{getEdges}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ \mbox{\hyperlink{class_node_afd05b423c3229fc5bb372d2d69f4ea77}{getPosition}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a87368ca7d92da5c79fbc1081f693537b}{getX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a07379dfb4664e987e94d761bff3631ef}{getY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_node_acd6ae26418fce3726eff6246b7409630}{hasEdgeTo}}(\mbox{\hyperlink{class_node_a2791559360966137a418c4506b087aa7}{Node}}*\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ QList<Node*>\ \mbox{\hyperlink{class_node_a120e57065e8bf8f37a615591fbcbda0c}{edges}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ QString\ \mbox{\hyperlink{class_node_ae8628217a021eed54b867d159559042b}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a3a6b88b82c51d21305656d01e3c53039}{x}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_node_a0658e9aa67d95daa5da3cca23b13f6de}{y}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//float\ transmissionDistance;\ \ \ ///<\ Transmission\ range}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//float\ transmissionSpeed;\ \ \ \ \ \ ///<\ Transmission\ speed}}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NODE\_H}}
+
+\end{DoxyCode}

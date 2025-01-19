@@ -1,0 +1,68 @@
+\doxysection{Matrix33 Class Reference}
+\hypertarget{class_matrix33}{}\label{class_matrix33}\index{Matrix33@{Matrix33}}
+
+
+The \doxylink{class_matrix33}{Matrix33} class represents a 3x3 matrix and allows matrix manipulation. It provides a method for calculating the matrix determinant.  
+
+
+
+
+{\ttfamily \#include $<$determinant.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matrix33_af5d566e26f06afb7937b70fc86d568dd}{get3x3\+From4x4}} (const \mbox{\hyperlink{class_matrix44}{Matrix44}} \&mat44, int shadow\+Lin, int shadow\+Col)
+\begin{DoxyCompactList}\small\item\em Extracts a 3x3 submatrix from a 4x4 matrix by removing a specified row and column. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix33_a91bdfd4a4ea7467fbb843761a830f090}{determinant}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the 3x3 matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix33_a78b7575191a5193b403a29a387ea9012}\label{class_matrix33_a78b7575191a5193b403a29a387ea9012} 
+float {\bfseries m} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of points representing the 3x3 matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_matrix33}{Matrix33} class represents a 3x3 matrix and allows matrix manipulation. It provides a method for calculating the matrix determinant. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_matrix33_a91bdfd4a4ea7467fbb843761a830f090}\index{Matrix33@{Matrix33}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix33@{Matrix33}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily \label{class_matrix33_a91bdfd4a4ea7467fbb843761a830f090} 
+float Matrix33\+::determinant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the determinant of the 3x3 matrix. 
+
+\begin{DoxyReturn}{Returns}
+The determinant of the matrix. 
+\end{DoxyReturn}
+\Hypertarget{class_matrix33_af5d566e26f06afb7937b70fc86d568dd}\index{Matrix33@{Matrix33}!get3x3From4x4@{get3x3From4x4}}
+\index{get3x3From4x4@{get3x3From4x4}!Matrix33@{Matrix33}}
+\doxysubsubsection{\texorpdfstring{get3x3From4x4()}{get3x3From4x4()}}
+{\footnotesize\ttfamily \label{class_matrix33_af5d566e26f06afb7937b70fc86d568dd} 
+void Matrix33\+::get3x3\+From4x4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix44}{Matrix44}} \&}]{mat44}{, }\item[{int}]{shadow\+Lin}{, }\item[{int}]{shadow\+Col}{}\end{DoxyParamCaption})}
+
+
+
+Extracts a 3x3 submatrix from a 4x4 matrix by removing a specified row and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat44} & The 4x4 matrix from which to extract the submatrix. \\
+\hline
+{\em shadow\+Lin} & The row to exclude. \\
+\hline
+{\em shadow\+Col} & The column to exclude. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/determinant.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/determinant.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\doxysection{server Class Reference}
+\hypertarget{classserver}{}\label{classserver}\index{server@{server}}
+
+
+The server class represents a server in a 2D plane and its associated properties.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver_ae034429a5a7b00634c6881444bccf38a}{server}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}n\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vector2_d}{Vector2D} object with the given x and y components. \end{DoxyCompactList}\item 
+\Hypertarget{classserver_a37d4138c5843635d19d14f2001ca9f3f}\label{classserver_a37d4138c5843635d19d14f2001ca9f3f} 
+{\bfseries server} (float \+\_\+x, float \+\_\+y, QColor \+\_\+color, QString \+\_\+name)
+\item 
+void \mbox{\hyperlink{classserver_abc4c0feb2f34e5b577fc00546741ec1b}{find\+Shortest\+Transmission\+Path}} (\mbox{\hyperlink{class_graph}{Graph}} \&graph, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}start\+Node, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}end\+Node)
+\begin{DoxyCompactList}\small\item\em Finds the shortest transmission path between two nodes in the graph. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classserver_af5265227c7fb9f128d1a7d447d21f6cd}{find\+Next\+Hop\+To\+Server}} (\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}graph, \mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}network\+Graph, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}start\+Node, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}end\+Node)
+\begin{DoxyCompactList}\small\item\em Finds the next hop to the server in the transmission path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classserver_a8582589a4b2df04b63f6b8ca9c3fe742}\label{classserver_a8582589a4b2df04b63f6b8ca9c3fe742} 
+float {\bfseries x}
+\item 
+\Hypertarget{classserver_a2d42e5cfd564b8b3b6b63474097dc488}\label{classserver_a2d42e5cfd564b8b3b6b63474097dc488} 
+float {\bfseries y}
+\begin{DoxyCompactList}\small\item\em The x and y components of the vector. \end{DoxyCompactList}\item 
+\Hypertarget{classserver_a74138cc7926927023e14d0517d558fe4}\label{classserver_a74138cc7926927023e14d0517d558fe4} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*} {\bfseries point}
+\begin{DoxyCompactList}\small\item\em Equivalent to server as \doxylink{class_vector2_d}{Vector2D}. \end{DoxyCompactList}\item 
+\Hypertarget{classserver_a8f1cea496680c1c05a482b24cc8e6f55}\label{classserver_a8f1cea496680c1c05a482b24cc8e6f55} 
+QColor {\bfseries color} = QColor("{}\#0eeb0e"{})
+\begin{DoxyCompactList}\small\item\em Default color, changed later. \end{DoxyCompactList}\item 
+\Hypertarget{classserver_ac2249051e11153735a620d82f93a272a}\label{classserver_ac2249051e11153735a620d82f93a272a} 
+QString {\bfseries name} ="{}"{}
+\begin{DoxyCompactList}\small\item\em Name of the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The server class represents a server in a 2D plane and its associated properties. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Server related methods \end{DoxyRefDesc}
+
+
+The server class provides position, color, and name and some methods to compute and find the shortest transmission paths and the next hop in a network graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classserver_ae034429a5a7b00634c6881444bccf38a}\index{server@{server}!server@{server}}
+\index{server@{server}!server@{server}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily \label{classserver_ae034429a5a7b00634c6881444bccf38a} 
+server\+::server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \texorpdfstring{$\ast$}{*}}]{n\+\_\+point}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_vector2_d}{Vector2D} object with the given x and y components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & The x component of the vector \\
+\hline
+{\em p\+\_\+y} & The y component of the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Server related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classserver_af5265227c7fb9f128d1a7d447d21f6cd}\index{server@{server}!findNextHopToServer@{findNextHopToServer}}
+\index{findNextHopToServer@{findNextHopToServer}!server@{server}}
+\doxysubsubsection{\texorpdfstring{findNextHopToServer()}{findNextHopToServer()}}
+{\footnotesize\ttfamily \label{classserver_af5265227c7fb9f128d1a7d447d21f6cd} 
+QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ server\+::find\+Next\+Hop\+To\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*}}]{network\+Graph}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{start\+Node}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{end\+Node}{}\end{DoxyParamCaption})}
+
+
+
+Finds the next hop to the server in the transmission path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph containing the nodes. \\
+\hline
+{\em network\+Graph} & The network graph used for routing. \\
+\hline
+{\em start\+Node} & The node where the path starts. \\
+\hline
+{\em end\+Node} & The node where the path ends. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of nodes representing the next hop towards the destination. 
+\end{DoxyReturn}
+\Hypertarget{classserver_abc4c0feb2f34e5b577fc00546741ec1b}\index{server@{server}!findShortestTransmissionPath@{findShortestTransmissionPath}}
+\index{findShortestTransmissionPath@{findShortestTransmissionPath}!server@{server}}
+\doxysubsubsection{\texorpdfstring{findShortestTransmissionPath()}{findShortestTransmissionPath()}}
+{\footnotesize\ttfamily \label{classserver_abc4c0feb2f34e5b577fc00546741ec1b} 
+void server\+::find\+Shortest\+Transmission\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{graph}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{start\+Node}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{end\+Node}{}\end{DoxyParamCaption})}
+
+
+
+Finds the shortest transmission path between two nodes in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph containing the nodes. \\
+\hline
+{\em start\+Node} & The node where the path starts. \\
+\hline
+{\em end\+Node} & The node where the path ends. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/server.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/server.\+cpp\end{DoxyCompactItemize}

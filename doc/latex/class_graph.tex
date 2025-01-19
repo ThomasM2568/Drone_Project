@@ -1,0 +1,317 @@
+\doxysection{Graph Class Reference}
+\hypertarget{class_graph}{}\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a2866cdbd6c08c2494aace528a1d51e0d}{add\+Node}} (const QString \&id, float x, float y)
+\begin{DoxyCompactList}\small\item\em Adds a node to the system with a specified ID and position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a248551b13649d44f7c117fc577508914}{add\+Node2}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Adds a node to the system with a specified position and returns its index. \end{DoxyCompactList}\item 
+\Hypertarget{class_graph_a1096d26434652b464bd26a08b40e1f15}\label{class_graph_a1096d26434652b464bd26a08b40e1f15} 
+void {\bfseries print\+Adjacency\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Prints the adjacency matrix representing the graph\textquotesingle{}s structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_ad6db99013690c65d67b2ba3ced68ccb5}{get\+Node}} (const QString \&id) const
+\begin{DoxyCompactList}\small\item\em Retrieves a node by its unique identifier. \end{DoxyCompactList}\item 
+const QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_graph_a0f7b28703111ea9290b073be89b1cea4}{get\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves all nodes in the graph. \end{DoxyCompactList}\item 
+QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_graph_a909be22eea9c1dca1f3b66c6939305ea}{find\+Articulation\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Finds the articulation points in the graph. \end{DoxyCompactList}\item 
+QList$<$ QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ $>$ \mbox{\hyperlink{class_graph_a1def767121e7e6188a524ee16eca1f5c}{find\+Clusters}} ()
+\begin{DoxyCompactList}\small\item\em Finds clusters (connected components) in the graph. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_graph_aa8f850f918d083f5e60b127b7891bec2}{dijkstra}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}start\+Node, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}end\+Node, QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Finds the shortest path between two nodes using Dijkstra\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a7a3cf0e7d74eeaccc90de5094c6ae298}{add\+Edge}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}node1, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}node2)
+\begin{DoxyCompactList}\small\item\em Adds an edge between two nodes in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a30c7ea6a112da9306042153e4e50e66f}{add\+Edge}} (int node\+ID1, int node\+ID2)
+\begin{DoxyCompactList}\small\item\em Adds an edge between two nodes identified by their IDs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_a564517677ce88ae6b7069c06ecc2e695}{get\+Node}} (const int x, const int y) const
+\begin{DoxyCompactList}\small\item\em Retrieves a node by its coordinates. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_graph_ab594e521a64cfd3652e70ce1e08b5afa}{get\+Next\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the next available node ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_a520be0d62341329125b150817ac32795}{DFS}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}node, QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&visited, QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&cluster)
+\begin{DoxyCompactList}\small\item\em Performs a depth-\/first search (DFS) on the graph starting from the given node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_aa0fe4ad953dc9bcf52f4e870678eafb9}{DFSArticulation\+Points}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}node, QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, bool $>$ \&visited, QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, int $>$ \&discovery\+Time, QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, int $>$ \&low\+Time, QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&parent, QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&articulation\+Points, int \&time)
+\begin{DoxyCompactList}\small\item\em Performs a depth-\/first search (DFS) to find articulation points in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graph_a7128877029a0a9ca35b155c39bf12397}\label{class_graph_a7128877029a0a9ca35b155c39bf12397} 
+QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries nodes}
+\begin{DoxyCompactList}\small\item\em List of all nodes in the graph, stores all nodes that are part of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]\doxylink{class_graph}{Graph} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily \label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f} 
+Graph\+::\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]\doxylink{class_graph}{Graph} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_graph_a30c7ea6a112da9306042153e4e50e66f}\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_graph_a30c7ea6a112da9306042153e4e50e66f} 
+void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{node\+ID1}{, }\item[{int}]{node\+ID2}{}\end{DoxyParamCaption})}
+
+
+
+Adds an edge between two nodes identified by their IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+ID1} & The ID of the first node. \\
+\hline
+{\em node\+ID2} & The ID of the second node. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graph_a7a3cf0e7d74eeaccc90de5094c6ae298}\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_graph_a7a3cf0e7d74eeaccc90de5094c6ae298} 
+void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node1}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node2}{}\end{DoxyParamCaption})}
+
+
+
+Adds an edge between two nodes in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & A pointer to the first node. \\
+\hline
+{\em node2} & A pointer to the second node. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graph_a2866cdbd6c08c2494aace528a1d51e0d}\index{Graph@{Graph}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily \label{class_graph_a2866cdbd6c08c2494aace528a1d51e0d} 
+void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const QString \&}]{id}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Adds a node to the system with a specified ID and position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the node. \\
+\hline
+{\em x} & The x-\/coordinate of the node. \\
+\hline
+{\em y} & The y-\/coordinate of the node. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graph_a248551b13649d44f7c117fc577508914}\index{Graph@{Graph}!addNode2@{addNode2}}
+\index{addNode2@{addNode2}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode2()}{addNode2()}}
+{\footnotesize\ttfamily \label{class_graph_a248551b13649d44f7c117fc577508914} 
+int Graph\+::add\+Node2 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Adds a node to the system with a specified position and returns its index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the node. \\
+\hline
+{\em y} & The y-\/coordinate of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the node. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a520be0d62341329125b150817ac32795}\index{Graph@{Graph}!DFS@{DFS}}
+\index{DFS@{DFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{DFS()}{DFS()}}
+{\footnotesize\ttfamily \label{class_graph_a520be0d62341329125b150817ac32795} 
+void Graph\+::\+DFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&}]{visited}{, }\item[{QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&}]{cluster}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Performs a depth-\/first search (DFS) on the graph starting from the given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The starting node for the DFS traversal. \\
+\hline
+{\em visited} & A set to track the visited nodes during the search. \\
+\hline
+{\em cluster} & A list to store the nodes found in the current cluster (connected component). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graph_aa0fe4ad953dc9bcf52f4e870678eafb9}\index{Graph@{Graph}!DFSArticulationPoints@{DFSArticulationPoints}}
+\index{DFSArticulationPoints@{DFSArticulationPoints}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{DFSArticulationPoints()}{DFSArticulationPoints()}}
+{\footnotesize\ttfamily \label{class_graph_aa0fe4ad953dc9bcf52f4e870678eafb9} 
+void Graph\+::\+DFSArticulation\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, bool $>$ \&}]{visited}{, }\item[{QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, int $>$ \&}]{discovery\+Time}{, }\item[{QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, int $>$ \&}]{low\+Time}{, }\item[{QMap$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&}]{parent}{, }\item[{QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&}]{articulation\+Points}{, }\item[{int \&}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Performs a depth-\/first search (DFS) to find articulation points in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The starting node for the DFS traversal. \\
+\hline
+{\em visited} & A map to track whether each node has been visited during the search. \\
+\hline
+{\em discovery\+Time} & A map to store the discovery time for each node during DFS. \\
+\hline
+{\em low\+Time} & A map to store the low time of each node during DFS. \\
+\hline
+{\em parent} & A map to store the parent node for each node during DFS traversal. \\
+\hline
+{\em articulation\+Points} & A set to store the articulation points found during DFS. \\
+\hline
+{\em time} & The current time used to assign discovery times to nodes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graph_aa8f850f918d083f5e60b127b7891bec2}\index{Graph@{Graph}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily \label{class_graph_aa8f850f918d083f5e60b127b7891bec2} 
+float Graph\+::dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{start\+Node}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{end\+Node}{, }\item[{QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Finds the shortest path between two nodes using Dijkstra\textquotesingle{}s algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & The starting node for the path. \\
+\hline
+{\em end\+Node} & The destination node for the path. \\
+\hline
+{\em path} & A list that will hold the nodes along the shortest path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total cost of the shortest path. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a909be22eea9c1dca1f3b66c6939305ea}\index{Graph@{Graph}!findArticulationPoints@{findArticulationPoints}}
+\index{findArticulationPoints@{findArticulationPoints}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findArticulationPoints()}{findArticulationPoints()}}
+{\footnotesize\ttfamily \label{class_graph_a909be22eea9c1dca1f3b66c6939305ea} 
+QSet$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ Graph\+::find\+Articulation\+Points (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Finds the articulation points in the graph. 
+
+\begin{DoxyReturn}{Returns}
+A set of nodes that are articulation points in the graph. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a1def767121e7e6188a524ee16eca1f5c}\index{Graph@{Graph}!findClusters@{findClusters}}
+\index{findClusters@{findClusters}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findClusters()}{findClusters()}}
+{\footnotesize\ttfamily \label{class_graph_a1def767121e7e6188a524ee16eca1f5c} 
+QList$<$ QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ $>$ Graph\+::find\+Clusters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Finds clusters (connected components) in the graph. 
+
+\begin{DoxyReturn}{Returns}
+A list of lists, each containing a set of connected nodes (a cluster). 
+\end{DoxyReturn}
+\Hypertarget{class_graph_ab594e521a64cfd3652e70ce1e08b5afa}\index{Graph@{Graph}!getNextId@{getNextId}}
+\index{getNextId@{getNextId}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNextId()}{getNextId()}}
+{\footnotesize\ttfamily \label{class_graph_ab594e521a64cfd3652e70ce1e08b5afa} 
+const int Graph\+::get\+Next\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the next available node ID. 
+
+\begin{DoxyReturn}{Returns}
+The next node ID. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a564517677ce88ae6b7069c06ecc2e695}\index{Graph@{Graph}!getNode@{getNode}}
+\index{getNode@{getNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_graph_a564517677ce88ae6b7069c06ecc2e695} 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Graph\+::get\+Node (\begin{DoxyParamCaption}\item[{const int}]{x}{, }\item[{const int}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a node by its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the node. \\
+\hline
+{\em y} & The y-\/coordinate of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the node at the specified coordinates. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_ad6db99013690c65d67b2ba3ced68ccb5}\index{Graph@{Graph}!getNode@{getNode}}
+\index{getNode@{getNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_graph_ad6db99013690c65d67b2ba3ced68ccb5} 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Graph\+::get\+Node (\begin{DoxyParamCaption}\item[{const QString \&}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a node by its unique identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the node corresponding to the given ID. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a0f7b28703111ea9290b073be89b1cea4}\index{Graph@{Graph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily \label{class_graph_a0f7b28703111ea9290b073be89b1cea4} 
+const QList$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \& Graph\+::get\+Nodes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves all nodes in the graph. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the list of nodes in the graph. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/graph.\+h\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/graph.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\doxysection{determinant.\+h}
+\hypertarget{determinant_8h_source}{}\label{determinant_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/determinant.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/determinant.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GEOMETRY\_TRIANGULATION\_GL\_DETERMINANT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GEOMETRY\_TRIANGULATION\_GL\_DETERMINANT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix33}{Matrix33}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix44}{Matrix44}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix22}{Matrix22}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix22_af43a553822d93f8d38fdf057603be0ae}{m}}[2][2];\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_matrix22_a847e41917439faa7d5707bbf1332b5a0}{get2x2From3x3}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix33}{Matrix33}}\ \&mat33,\ \textcolor{keywordtype}{int}\ shadowLin,\ \textcolor{keywordtype}{int}\ shadowCol);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix22_ad18ae363d30a93115d9ac2fb53e6e71a}{determinant}}()\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_matrix22_af43a553822d93f8d38fdf057603be0ae}{m}}[0][0]\ *\ \mbox{\hyperlink{class_matrix22_af43a553822d93f8d38fdf057603be0ae}{m}}[1][1]\ -\/\ \mbox{\hyperlink{class_matrix22_af43a553822d93f8d38fdf057603be0ae}{m}}[0][1]\ *\ \mbox{\hyperlink{class_matrix22_af43a553822d93f8d38fdf057603be0ae}{m}}[1][0];}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix33}{Matrix33}}\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix33_a78b7575191a5193b403a29a387ea9012}{m}}[3][3];\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_matrix33_af5d566e26f06afb7937b70fc86d568dd}{get3x3From4x4}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix44}{Matrix44}}\ \&mat44,\ \textcolor{keywordtype}{int}\ shadowLin,\ \textcolor{keywordtype}{int}\ shadowCol);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix33_a91bdfd4a4ea7467fbb843761a830f090}{determinant}}();}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix44}{Matrix44}}\ \{}
+\DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix44_a5fa44c68088fb376f652e59cf085b749}{m}}[4][4];\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix44_aa04b9a3ed2ab380ba4aa3b91d514c4cd}{determinant}}();}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GEOMETRY\_TRIANGULATION\_GL\_DETERMINANT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,79 @@
+\doxysection{Voronoi Class Reference}
+\hypertarget{class_voronoi}{}\label{class_voronoi}\index{Voronoi@{Voronoi}}
+
+
+The \doxylink{class_voronoi}{Voronoi} class Represents a \doxylink{class_voronoi}{Voronoi} diagram based on a set of points and their triangulation.  
+
+
+
+
+{\ttfamily \#include $<$voronoi.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_voronoi_a232de8789eb1381b8697e83570443691}{add\+Polygon}} (const \mbox{\hyperlink{class_triangle}{Triangle}} center, const QColor \&color, const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} $>$ \&triangles)
+\begin{DoxyCompactList}\small\item\em Add a \doxylink{class_voronoi}{Voronoi} polygon to the diagram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_voronoi_a65fd232c6d784e70589e4b5f3c1ee8b2}{draw}} (QPainter \&painter)
+\begin{DoxyCompactList}\small\item\em Draw all polygons in the \doxylink{class_voronoi}{Voronoi} diagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_voronoi_ac4bb9f624b3a0c8d33dcfeb8086018f5}\label{class_voronoi_ac4bb9f624b3a0c8d33dcfeb8086018f5} 
+QVector$<$ \mbox{\hyperlink{class_my_polygon}{My\+Polygon}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries tab\+Poly}
+\begin{DoxyCompactList}\small\item\em Array of polygons in the \doxylink{class_voronoi}{Voronoi} diagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_voronoi}{Voronoi} class Represents a \doxylink{class_voronoi}{Voronoi} diagram based on a set of points and their triangulation. 
+
+\begin{DoxyAuthor}{Author}
+Kyllian Cuevas \& Thomas Mirbey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/11/2024 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]\doxylink{class_voronoi}{Voronoi} related methods \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_voronoi_a232de8789eb1381b8697e83570443691}\index{Voronoi@{Voronoi}!addPolygon@{addPolygon}}
+\index{addPolygon@{addPolygon}!Voronoi@{Voronoi}}
+\doxysubsubsection{\texorpdfstring{addPolygon()}{addPolygon()}}
+{\footnotesize\ttfamily \label{class_voronoi_a232de8789eb1381b8697e83570443691} 
+void Voronoi\+::add\+Polygon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_triangle}{Triangle}}}]{center}{, }\item[{const QColor \&}]{color}{, }\item[{const QVector$<$ \mbox{\hyperlink{class_triangle}{Triangle}} $>$ \&}]{triangles}{}\end{DoxyParamCaption})}
+
+
+
+Add a \doxylink{class_voronoi}{Voronoi} polygon to the diagram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center of the polygon \\
+\hline
+{\em color} & The color of the polygon \\
+\hline
+{\em triangles} & The Delaunay triangles of the mesh \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_voronoi_a65fd232c6d784e70589e4b5f3c1ee8b2}\index{Voronoi@{Voronoi}!draw@{draw}}
+\index{draw@{draw}!Voronoi@{Voronoi}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_voronoi_a65fd232c6d784e70589e4b5f3c1ee8b2} 
+void Voronoi\+::draw (\begin{DoxyParamCaption}\item[{QPainter \&}]{painter}{}\end{DoxyParamCaption})}
+
+
+
+Draw all polygons in the \doxylink{class_voronoi}{Voronoi} diagram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & The QPainter object used for rendering \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thoma/\+Downloads/\+CUEVAS\+\_\+\+MIRBEY\+\_\+\+Drone\+\_\+\+Project/voronoi.\+h\end{DoxyCompactItemize}

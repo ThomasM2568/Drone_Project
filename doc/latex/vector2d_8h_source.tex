@@ -1,0 +1,94 @@
+\doxysection{vector2d.\+h}
+\hypertarget{vector2d_8h_source}{}\label{vector2d_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/vector2d.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/vector2d.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VECTOR2D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VECTOR2D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QColor>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ QColor\ color\ =\ QColor(\textcolor{stringliteral}{"{}\#0eeb0e"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ QString\ name=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}(\textcolor{keywordtype}{float}\ p\_x,\textcolor{keywordtype}{float}\ p\_y):x(p\_x),\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}(p\_y)\ \{\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_af29b5eef4648de62e98d19e0afa3c51e}{Vector2D}}(\textcolor{keywordtype}{float}\ p\_x,\textcolor{keywordtype}{float}\ p\_y,\ QString\ p\_name):x(p\_x),\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}(p\_y),name(p\_name)\ \{\};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_a98e9997ebb7a629f4db52397d4e0d653}{Vector2D}}()\ \{\ x=\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}=0.0;\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_a93a8c1453c5de442266172d112cda946}{Vector2D}}(\mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\ *p):x(p-\/>x),\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}(p-\/>\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}})\ \{\};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vector2_d_a14a6cb145a9ac37b7242977b4d861040}{set}}(\textcolor{keywordtype}{double}\ p\_x,\textcolor{keywordtype}{double}\ p\_y)\ \{\ x=p\_x;\ \mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}=p\_y;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vector2_d_ab08635b0482451cc43b5b399034eff2f}{length}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt(x*x+\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}*\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}});}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator*(\textcolor{keywordtype}{float}\ scalar)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector2_d_a98e9997ebb7a629f4db52397d4e0d653}{Vector2D}}(x\ *\ scalar,\ \mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}\ *\ scalar);}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_ade14049e72c6167b1547bdccb61ad477}{orthoNormed}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ l=\mbox{\hyperlink{class_vector2_d_ab08635b0482451cc43b5b399034eff2f}{length}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vector2_d_a98e9997ebb7a629f4db52397d4e0d653}{Vector2D}}(\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}/l,-\/x/l);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_a3bf550ff454982ff7c839c84f89ce88a}{operator[]}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ i)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (i==0)?x:\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}};}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ Friend\ functions\ for\ common\ vector\ operations:}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{double}\ operator\ *(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator\ *(\textcolor{keywordtype}{double},\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a37c1e7b52b4d9a0b452d9dc1e5a3535c}{operator\ +}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a73d3241ae1e865371f1713718af3004f}{operator\ -\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a73d3241ae1e865371f1713718af3004f}{operator\ -\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vector2_d_a0c76d01601145a90c052ace1be5f2357}{operator\ \string^}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vector2_d_a5a1dc24d8a7344df74f7865d34c2f3b2}{operator\ ==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vector2_d_ae0bc4e011d92acb25ce7b22537c3089d}{operator\ !=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\&);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{friend}\ QDebug\ \mbox{\hyperlink{class_vector2_d_a3632a18a6e82fdaa6497d8011990cb8d}{operator<<}}(QDebug\ dbg,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d_ac55d52c97b338457bc3afb5d2f5e3344}{Vector2D}}\&\ v)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ dbg.nospace()\ <<\ \textcolor{stringliteral}{"{}Vector2D("{}}\ <<\ v.x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ v.\mbox{\hyperlink{class_vector2_d_a85215519d3f71d0e6be7d636346f3b7d}{y}}\ <<\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dbg.space();}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{comment}{//\ Function\ prototypes\ for\ operator\ overloads}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00169\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator\ *(\textcolor{keywordtype}{double},\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{double}\ operator\ *(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00185\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator\ +(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator\ -\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00200\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ operator\ -\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{double}\ operator\ \string^(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00216\ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00224\ \textcolor{keywordtype}{bool}\ operator\ !=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&);}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VECTOR2D\_H}}
+
+\end{DoxyCode}

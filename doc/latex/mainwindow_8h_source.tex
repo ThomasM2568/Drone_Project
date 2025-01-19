@@ -1,0 +1,77 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/mainwindow.h@{C:/Users/thoma/Downloads/CUEVAS\_MIRBEY\_Drone\_Project/mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}server.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}drone.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00018\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aeb95538df1a092864fbd9c1ef05bdc28}{on\_actionNew2\_triggered}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa68eba140c2cf5c1cd2b4bd81337fa83}{on\_actionQuit\_triggered}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ada6ecfabc8ccc186fb3134211099bcc8}{on\_actionLoad\_triggered}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a217d51c631b720f86ec21d85758cbcf8}{on\_actionCircles\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a493b04bdb535b924fe099a43045c79f0}{on\_actionTriangles\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aebda705f27cd9e017807a8f0d96df26e}{on\_actionCenter\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4f3ebda1ba39e0ef4d678b44893c9c7f}{on\_actionAbout\_triggered}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae1f4934cb3d376225f7576ab05159bc0}{on\_actionCheck\_Delaunay\_triggered}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae652bfd7eb9af77488c6febd68083602}{on\_actionProcess\_flip\_triggered}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a65d472355e925956cb542d7d5cfd0904}{on\_actionVoronoi\_triggered}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad9ef5d9407a855186edecf20d538651e}{on\_actionLoad\_Servers\_triggered}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a8a8d1a5ea4f7c6a8ff2f100bf0092f0b}{on\_actionNew\_2\_triggered}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_afc4e9d93875e85bebfa762d1a60523e7}{on\_actionServers\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a7c0739d4e21a7ac4c3d787071629ecd0}{on\_actionRoutes\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4c021c74635da0011049afd7369a334f}{on\_actionShared\_sides\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_afce1411fa5de59492a11b5d1a868ec51}{createGraph}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{classserver}{server}}*\ \mbox{\hyperlink{class_main_window_a5609f25b4cb7da550693e7bdf1cd2faa}{getServer}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}*\ v);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac2a270cd0dbaf45d2c14ae293a83a309}{on\_actionServer\_routes\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aee78080ea06d30a8d79a77304145ca90}{on\_actionNext\_steps\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5d500d6dfce8ab8be0d8dda6b052b3dc}{on\_actionEnable\_Disable\_triggered}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00171\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};\ }
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}
