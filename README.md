@@ -40,6 +40,6 @@ This document provides an overview of the project, key constraints, drone behavi
 - **Loading a New Configuration File**:
   - To load a new configuration JSON file, go to line 32 of the `mainwindow.cpp` file:
     ```cpp
-    QString configFile = "C:/Users/thoma/Downloads/config2.json";
+    QString configFile = "path/to/your/configFile/config2.json";
     ```
   - Change the `configFile` variable to the desired file path, save, and the application will use the updated configuration.
