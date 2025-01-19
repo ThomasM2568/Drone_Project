@@ -1,5 +1,5 @@
 # Drone Project
-Kyllian Cuevas & Thomas Mirbey
+Kyllian Cuevas & Thomas Mirbey. \n
 Documentation is located in the doc directory in the rar file.
 # Project Constraints, Overview, and Instructions
 
