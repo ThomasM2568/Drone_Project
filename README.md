@@ -1,5 +1,6 @@
 # Drone Project
 Kyllian Cuevas & Thomas Mirbey
+Documentation is located in the doc directory in the rar file.
 # Project Constraints, Overview, and Instructions
 
 This document provides an overview of the project, key constraints, drone behavior, and how to load a new configuration file.
