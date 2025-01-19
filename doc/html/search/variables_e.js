@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['scale_0',['scale',['../class_canvas.html#a387509ed6ea92c766ec53cef653deab1',1,'Canvas']]],
+  ['serveraddress_1',['serverAddress',['../classmy_drone.html#a7f703b73e24fa1b442ef34594b24f1b5',1,'myDrone']]],
+  ['serverimg_2',['serverImg',['../class_canvas.html#a2e57eb19e5db0132f6503363c9f443a6',1,'Canvas']]],
+  ['serverlist_3',['serverList',['../class_my_polygon.html#a9dc00e18b374ef7cd7e0fb0603a81b7d',1,'MyPolygon']]],
+  ['servers_4',['servers',['../class_canvas.html#aeced5769ef6b9eb273fc496ee5c92a25',1,'Canvas']]],
+  ['serversobj_5',['serversObj',['../class_canvas.html#ad5af720ff6304250c55815ee18aff70d',1,'Canvas']]],
+  ['sharedsides_6',['sharedSides',['../class_my_polygon.html#a1a3f4df029b0aec64c97d455909f6b65',1,'MyPolygon']]],
+  ['showcenters_7',['showCenters',['../class_canvas.html#ac1a1b0d3b6fa9d3c4aa30c014e15051c',1,'Canvas']]],
+  ['showcircles_8',['showCircles',['../class_canvas.html#abb70425f30be2b4b97e56bb56486a525',1,'Canvas']]],
+  ['showcollision_9',['showCollision',['../classmy_drone.html#a65761b9229c77cf51b35eb6d588ebf8d',1,'myDrone']]],
+  ['showroutes_10',['showRoutes',['../class_canvas.html#a7746f2e7538f5086be92b2a0b5393268',1,'Canvas']]],
+  ['showserverroutes_11',['showServerRoutes',['../class_canvas.html#aac261a9654bb54a088738df053cdc6f5',1,'Canvas']]],
+  ['showservers_12',['showServers',['../class_canvas.html#a4f41d171d73a82b5b376905d087f4b3a',1,'Canvas']]],
+  ['showsharedsides_13',['showSharedSides',['../class_canvas.html#a2a72f9c87ccdc95493b927d4a7eb6e42',1,'Canvas']]],
+  ['showtriangles_14',['showTriangles',['../class_canvas.html#adec15319e8610b6a4a016f70970ee82f',1,'Canvas']]],
+  ['speed_15',['speed',['../classmy_drone.html#a50392b023e05db5db2af183b8cb17d41',1,'myDrone']]],
+  ['speedpb_16',['speedPB',['../classmy_drone.html#a2e39fea8aa4f20d81c11a678f2e24c57',1,'myDrone']]],
+  ['speedsetpoint_17',['speedSetpoint',['../classmy_drone.html#a6db8dec16ee55486cba56b149ec4657a',1,'myDrone']]],
+  ['status_18',['status',['../classmy_drone.html#a83c850e3f3adfdeaaa9e036129643477',1,'myDrone']]]
+];
