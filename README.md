@@ -43,3 +43,5 @@ This document provides an overview of the project, key constraints, drone behavi
     QString configFile = "path/to/your/configFile/config2.json";
     ```
   - Change the `configFile` variable to the desired file path, save, and the application will use the updated configuration.
+
+As soon as the voronoi diagram is done, you can see the drones and allow them to move using the menu
